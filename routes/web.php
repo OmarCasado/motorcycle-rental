@@ -8,7 +8,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/motorcycles', [MotorcycleController::class, 'index']);
+Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');
+Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

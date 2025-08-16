@@ -23,6 +23,7 @@
                     <td>{{ $moto->color }}</td>
                     <td>{{ number_format($moto->price_per_day) }}</td>
                     <td>{{ $moto->is_available ? 'Available' : 'Not Available' }}</td>
+                    <td><a href="{{ route('showMotorcycle', $moto->id) }}">View</a></td>
                 </tr>
             @endforeach
         </tbody>

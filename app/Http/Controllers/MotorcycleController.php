@@ -11,4 +11,9 @@ class MotorcycleController extends Controller
         $motorcycles = Motorcycle::all();
         return view('motorcycles.index', compact('motorcycles'));
     }
+
+    public function show($id) {
+        $motorcycle = Motorcycle::findOrFail($id);
+        return view('motorcycles.show', compact('motorcycle'));
+    }
 }

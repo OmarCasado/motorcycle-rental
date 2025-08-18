@@ -8,8 +8,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+// トップページ
 Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');
+
+// バイクを追加
+Route::get('/motorcycles/create', [MotorcycleController::class, 'create'])->name('createMotorcycle');
+
+// 詳細ページ
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
+
+// バイクを保存
+Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

@@ -28,5 +28,7 @@
             @endforeach
         </tbody>
     </table>
+
+    <a href="{{ route('createMotorcycle') }}">+ Add Motorcycle</a>
 </div>
 @endsection

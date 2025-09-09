@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class MotorcycleController extends Controller
 {
     public function index() {
-        $motorcycles = Motorcycle::all();
+        $motorcycles = Motorcycle::with('brand')->get();
         return view('motorcycles.index', compact('motorcycles'));
     }
 
@@ -25,12 +25,12 @@ class MotorcycleController extends Controller
 
     public function store(Request $request) {
         $validated = $request->validate([
-            'brand_id'      => 'required|exists:brands,id',
+            'brand_id'      => 'required',
             'model'         => 'required|string|max:255',
             'year'          => 'required|digits:4|integer|min:2000|max:' . date('Y'),
             'color'         => 'required|string|max:50',
             'price_per_day' => 'required|integer|min:0',
-            'is_available'  => 'nullable|boolean',
+            'is_available'  => 'nullable',
         ]);
 
         $validated['is_available'] = $request->has('is_available');

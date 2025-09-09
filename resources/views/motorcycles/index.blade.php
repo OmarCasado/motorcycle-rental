@@ -17,7 +17,7 @@
         <tbody>
             @foreach($motorcycles as $moto)
                 <tr>
-                    <td>{{ $moto->brand }}</td>
+                    <td>{{ $moto->brand->name ?? 'N/A' }}</td>
                     <td>{{ $moto->model }}</td>
                     <td>{{ $moto->year }}</td>
                     <td>{{ $moto->color }}</td>

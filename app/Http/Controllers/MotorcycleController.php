@@ -40,4 +40,10 @@ class MotorcycleController extends Controller
         return redirect()->route('topPage')
             ->with('success', 'Motorcycle added successfully!');
     }
+
+    public function edit($id) {
+        $motorcycle = Motorcycle::findOrFail($id);
+        $brands = Brand::all();
+        return view('motorcycles.edit', compact('motorcycle', 'brands'));
+    }
 }

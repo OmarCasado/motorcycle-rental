@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="" method="POST">
+    <form action="{{ route('updateMotorcycle', $motorcycle->id) }}" method="POST">
         @csrf
 
         <div>

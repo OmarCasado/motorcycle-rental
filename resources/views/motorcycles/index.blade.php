@@ -24,6 +24,7 @@
                     <td>{{ number_format($moto->price_per_day) }}</td>
                     <td>{{ $moto->is_available ? 'Available' : 'Not Available' }}</td>
                     <td><a href="{{ route('showMotorcycle', $moto->id) }}">View</a></td>
+                    <td><a href="{{ route('editMotorcycle', $moto->id) }}">Edit</a></td>
                 </tr>
             @endforeach
         </tbody>

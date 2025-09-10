@@ -46,4 +46,24 @@ class MotorcycleController extends Controller
         $brands = Brand::all();
         return view('motorcycles.edit', compact('motorcycle', 'brands'));
     }
+
+    public function update(Request $request, $id) {
+        $motorcycle = Motorcycle::findOrFail($id);
+
+        $validated = $request->validate([
+            'brand_id'      => 'required',
+            'model'         => 'required|string|max:255',
+            'year'          => 'required|digits:4|integer|min:2000|max:' . date('Y'),
+            'color'         => 'required|string|max:50',
+            'price_per_day' => 'required|integer|min:0',
+            'is_available'  => 'nullable',
+        ]);
+
+        $validated['is_available'] = $request->has('is_available');
+
+        $motorcycle->update($validated);
+
+        return redirect()->route('topPage')
+            ->with('success', 'Updated Successfully.');
+    }
 }

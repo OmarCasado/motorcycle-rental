@@ -14,6 +14,12 @@ Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPag
 // バイクを追加
 Route::get('/motorcycles/create', [MotorcycleController::class, 'create'])->name('createMotorcycle');
 
+// バイクを編集ページを表示
+Route::get('/motorcycles/{id}/edit', [MotorcycleController::class, 'edit'])->name('editMotorcycle');
+
+// バイクを編集
+Route::post('/motorcycles/update/{id}', [MotorcycleController::class, 'update'])->name('updateMotorcycle');
+
 // 詳細ページ
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 

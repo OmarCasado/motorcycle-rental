@@ -4,6 +4,22 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MotorcycleController;
 
+Route::get('/', function () {
+    return redirect()->route('topPage');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
+
 // トップページ
 Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');
 
@@ -28,5 +44,3 @@ Route::middleware(['auth'])->group(function() {
     // バイクを保存
     Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
 });
-
-require __DIR__.'/auth.php';

@@ -25,6 +25,7 @@
                     <td>{{ $moto->is_available ? 'Available' : 'Not Available' }}</td>
                     <td><a href="{{ route('showMotorcycle', $moto->id) }}">View</a></td>
                     <td><a href="{{ route('editMotorcycle', $moto->id) }}">Edit</a></td>
+                    <td><a href="{{ route('deleteMotorcycle', $moto->id) }}">Delete</a></td>
                 </tr>
             @endforeach
         </tbody>

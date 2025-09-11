@@ -25,7 +25,12 @@
                     <td>{{ $moto->is_available ? 'Available' : 'Not Available' }}</td>
                     <td><a href="{{ route('showMotorcycle', $moto->id) }}">View</a></td>
                     <td><a href="{{ route('editMotorcycle', $moto->id) }}">Edit</a></td>
-                    <td><a href="{{ route('deleteMotorcycle', $moto->id) }}">Delete</a></td>
+                    <td>
+                        <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="post" onsubmit="return confirm('Are you sure?')">
+                            @csrf
+                            <button type="Submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             @endforeach
         </tbody>

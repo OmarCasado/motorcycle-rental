@@ -66,4 +66,12 @@ class MotorcycleController extends Controller
         return redirect()->route('topPage')
             ->with('success', 'Updated Successfully.');
     }
+
+    public function delete($id) {
+        $motorcycle = Motorcycle::findOrFail($id);
+        $motorcycle->delete();
+
+        return redirect()->route('topPage')
+            ->with('success', 'Deleted Successfully.');
+    }
 }

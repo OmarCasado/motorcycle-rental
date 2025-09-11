@@ -20,6 +20,9 @@ Route::get('/motorcycles/{id}/edit', [MotorcycleController::class, 'edit'])->nam
 // バイクを編集
 Route::post('/motorcycles/update/{id}', [MotorcycleController::class, 'update'])->name('updateMotorcycle');
 
+// バイクを削除
+Route::get('/motorcycles/delete/{id}', [MotorcycleController::class, 'delete'])->name('deleteMotorcycle');
+
 // 詳細ページ
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 

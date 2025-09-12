@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MotorcycleController;
+use App\Http\Controllers\RentalController;
 
 Route::get('/', function () {
     return redirect()->route('topPage');
@@ -43,4 +44,10 @@ Route::middleware(['auth'])->group(function() {
 
     // バイクを保存
     Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
+
+    // レンタルフォーム
+    Route::get('/motorcycles/{id}/rent', [RentalController::class, 'create'])->name('rentMotorcycle');
+
+    // バイクをレンタル
+    Route::post('/motorcycles/{id}/rent', [RentalController::class, 'store'])->name('reserveMotorcycle');
 });

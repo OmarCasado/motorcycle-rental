@@ -8,22 +8,26 @@ use Illuminate\Http\Request;
 
 class MotorcycleController extends Controller
 {
-    public function index() {
+    public function index()
+    {
         $motorcycles = Motorcycle::with('brand')->get();
         return view('motorcycles.index', compact('motorcycles'));
     }
 
-    public function show($id) {
+    public function show($id)
+    {
         $motorcycle = Motorcycle::findOrFail($id);
         return view('motorcycles.show', compact('motorcycle'));
     }
 
-    public function create() {
+    public function create()
+    {
         $brands = Brand::all();
         return view('motorcycles.create', compact('brands'));
     }
 
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validated = $request->validate([
             'brand_id'      => 'required',
             'model'         => 'required|string|max:255',
@@ -41,13 +45,15 @@ class MotorcycleController extends Controller
             ->with('success', 'Motorcycle added successfully!');
     }
 
-    public function edit($id) {
+    public function edit($id)
+    {
         $motorcycle = Motorcycle::findOrFail($id);
         $brands = Brand::all();
         return view('motorcycles.edit', compact('motorcycle', 'brands'));
     }
 
-    public function update(Request $request, $id) {
+    public function update(Request $request, $id)
+    {
         $motorcycle = Motorcycle::findOrFail($id);
 
         $validated = $request->validate([
@@ -67,7 +73,8 @@ class MotorcycleController extends Controller
             ->with('success', 'Updated Successfully.');
     }
 
-    public function delete($id) {
+    public function delete($id)
+    {
         $motorcycle = Motorcycle::findOrFail($id);
         $motorcycle->delete();
 

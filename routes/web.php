@@ -44,11 +44,10 @@ Route::middleware(['auth'])->group(function() {
 
     // バイクを保存
     Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
-
-
-    // バイクをレンタル
-    Route::post('/motorcycles/{id}/reserve', [RentalController::class, 'reserve'])->name('reserveMotorcycle');
 });
 
     // レンタルフォーム
     Route::get('/motorcycles/{id}/rent', [RentalController::class, 'rent'])->name('rentMotorcycle');
+
+    // バイクをレンタル
+    Route::post('/motorcycles/{id}/reserve', [RentalController::class, 'reserve'])->name('reserveMotorcycle');

@@ -13,4 +13,11 @@
 
     <a href="{{ route('topPage') }}">← Back to list</a>
 </div>
+
+@if(session('success'))
+    <div>
+        {{ session('success') }}
+    </div>
+@endif
+
 @endsection

@@ -57,8 +57,11 @@ class RentalController extends Controller
         }
 
         // レンタル費用を計算。一日ごとレンタルする。
-        $seconds = $end->diffInSeconds($start);
-        $days = (int) ceil($seconds / (24 * 3600));
+        $days = $start->diffInDays($end);
+
+        if($days === 0) {
+            $days = 1;
+        }
 
         $motorcycle = Motorcycle::findOrFail($id);
         $totalPrice = $motorcycle->price_per_day * $days;

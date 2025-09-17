@@ -9,6 +9,16 @@ use Illuminate\Http\Request;
 
 class RentalController extends Controller
 {
+    public function index(Request $request)
+    {
+        $rentals = Rental::with('motorcycle')
+            ->where('user_id', $request->user()->id)
+            ->orderBy('start_datetime', 'desc')
+            ->get();
+
+        return view('rentals.index', compact('rentals'));
+    }
+
     public function rent($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);

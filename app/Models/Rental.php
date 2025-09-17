@@ -17,5 +17,15 @@ class Rental extends Model
     protected $casts = [
     'start_datetime' => 'datetime',
     'end_datetime'   => 'datetime',
-];
+    ];
+
+    public function motorcycle()
+    {
+        return $this->belongsTo(Motorcycle::class);
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

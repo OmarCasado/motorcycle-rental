@@ -57,7 +57,7 @@ class RentalController extends Controller
         }
 
         // レンタル費用を計算。一日ごとレンタルする。
-        $days = $start->diffInDays($end);
+        $days = (int) $start->diffInDays($end);
 
         if($days === 0) {
             $days = 1;

@@ -55,6 +55,6 @@ Route::middleware(['auth'])->group(function() {
     // レンタル履歴を表示
     Route::get('/my-rentals', [RentalController::class, 'index'])->name('showMyRentals');
 
-    // アドミンレンタル画面
+    // 管理者レンタル画面
     Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
 });

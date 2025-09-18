@@ -42,6 +42,10 @@
                             My Rentals
                         </x-dropdown-link>
 
+                        <x-dropdown-link :href="route('AdminShowRentals')">
+                            All Rentals
+                        </x-dropdown-link>
+
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
@@ -88,8 +92,8 @@
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
-                <x-responsive-nav-link :href="route('showMyRentals')">
-                    My Rentals
+                <x-responsive-nav-link :href="route('AdminShowRentals')">
+                    All Rentals
                 </x-responsive-nav-link>
 
                 <!-- Authentication -->

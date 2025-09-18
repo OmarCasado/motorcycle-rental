@@ -42,9 +42,13 @@
                             My Rentals
                         </x-dropdown-link>
 
-                        <x-dropdown-link :href="route('AdminShowRentals')">
-                            All Rentals
-                        </x-dropdown-link>
+                        @auth
+                            @if(Auth::user()->role === 'admin')
+                                <x-dropdown-link :href="route('AdminShowRentals')">
+                                    All Rentals
+                                </x-dropdown-link>
+                            @endif
+                        @endauth
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -92,9 +96,17 @@
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
 
-                <x-responsive-nav-link :href="route('AdminShowRentals')">
-                    All Rentals
+                <x-responsive-nav-link :href="route('showMyRentals')">
+                    My Rentals
                 </x-responsive-nav-link>
+
+                @auth
+                    @if(Auth::user()->role === 'admin')
+                        <x-responsive-nav-link :href="route('AdminShowRentals')">
+                            All Rentals
+                        </x-responsive-nav-link>
+                    @endif
+                @endauth
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

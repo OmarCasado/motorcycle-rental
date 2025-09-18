@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MotorcycleController;
 use App\Http\Controllers\RentalController;
+use App\Http\Controllers\AdminRentalController;
 
 Route::get('/', function () {
     return redirect()->route('topPage');
@@ -53,4 +54,7 @@ Route::middleware(['auth'])->group(function() {
 
     // レンタル履歴を表示
     Route::get('/my-rentals', [RentalController::class, 'index'])->name('showMyRentals');
+
+    // アドミンレンタル画面
+    Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
 });

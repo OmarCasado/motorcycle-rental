@@ -29,7 +29,7 @@ Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPag
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 
 // 認証
-Route::middleware(['auth'])->group(function() {
+Route::middleware('auth')->group(function() {
 
     // バイクを追加
     Route::get('/motorcycles/create', [MotorcycleController::class, 'create'])->name('createMotorcycle');
@@ -55,6 +55,8 @@ Route::middleware(['auth'])->group(function() {
     // レンタル履歴を表示
     Route::get('/my-rentals', [RentalController::class, 'index'])->name('showMyRentals');
 
-    // 管理者レンタル画面
-    Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
+    Route::middleware('admin')->group(function(){
+        // 管理者レンタル画面
+        Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
+    });
 });

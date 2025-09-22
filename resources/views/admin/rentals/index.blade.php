@@ -15,6 +15,8 @@
                     <th>Start</th>
                     <th>End</th>
                     <th>Total Price (¥)</th>
+                    <th>Status</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -25,6 +27,17 @@
                         <td>{{ $rental->start_datetime->format('Y-m-d H:i') }}</td>
                         <td>{{ $rental->end_datetime->format('Y-m-d H:i') }}</td>
                         <td>{{ number_format($rental->total_price) }}</td>
+                        <td>{{ ucfirst($rental->status) }}</td>
+                        <td>
+                            @if ($rental->status === 'active')
+                                <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    <button type="submit">Cancel</button>
+                                </form>
+                            @else
+                                <span>-</span>
+                            @endif
+                        </td>
                     </tr>
                 @endforeach
             </tbody>

@@ -56,7 +56,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/my-rentals', [RentalController::class, 'index'])->name('showMyRentals');
 
     // レンタルをキャンセル
-    Route::post('/motorcycles/my-rentals/{id}/cancel', [RentalController::class, 'cancel'])->name('cancelMyRental');
+    Route::post('/my-rentals/{id}/cancel', [RentalController::class, 'cancel'])->name('cancelMyRental');
 
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面

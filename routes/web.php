@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MotorcycleController;
 use App\Http\Controllers\RentalController;
 use App\Http\Controllers\AdminRentalController;
+use App\Http\Controllers\AdminUserController;
 
 Route::get('/', function () {
     return redirect()->route('topPage');
@@ -61,5 +62,11 @@ Route::middleware('auth')->group(function() {
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面
         Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
+
+        // ユ－ザ－を表示
+        Route::get('/admin/users', [AdminUserController::class, 'index'])->name('showUsers');
+
+        // ユ－ザ－権限を変更
+        Route::post('/admin/users/{id}/role', [AdminUserController::class, 'updateRole'])->name('updateUserRole');
     });
 });

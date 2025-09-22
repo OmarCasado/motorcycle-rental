@@ -6,6 +6,7 @@ use App\Models\Motorcycle;
 use App\Models\Rental;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class RentalController extends Controller
 {
@@ -87,5 +88,19 @@ class RentalController extends Controller
 
         return redirect()->route('showMotorcycle', $id)
             ->with('success', "Reservation created. Total: ¥" . number_format($totalPrice));
+    }
+
+    public function cancel($id)
+    {
+        $rental = Rental::findOrFail($id);
+
+        if($rental->user_id !== Auth::user()->id && Auth::user()->role !== 'admin') {
+            abort(403, 'Unauthorized');
+        }
+
+        $rental->status = 'cancelled';
+        $rental->save();
+
+        return redirect()->back()->with('success', 'Reservation cancelled successfully.');
     }
 }

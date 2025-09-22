@@ -12,6 +12,7 @@ class Rental extends Model
         'start_datetime',
         'end_datetime',
         'total_price',
+        'status'
     ];
 
     protected $casts = [

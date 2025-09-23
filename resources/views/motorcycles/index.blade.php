@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <h1>Available Motorcycles</h1>
+    <h1 class="text-4xl font-bold text-red-600">Available Motorcycles</h1>
     <table border="1" cellpadding="10" cellspacing="0">
         <thead>
             <tr>

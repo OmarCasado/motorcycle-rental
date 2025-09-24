@@ -49,6 +49,11 @@
         </div>
 
         <div>
+            <label for="image">Motorcycle Image:</label>
+            <input type="file" name="image" id="image">
+        </div>
+
+        <div>
             <label>
                 <input type="checkbox" name="is_available" {{ $motorcycle->is_available ? 'checked' : '' }}>
                 Available

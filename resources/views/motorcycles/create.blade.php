@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('storeMotorcycle') }}" method="POST">
+    <form action="{{ route('storeMotorcycle') }}" method="post">
         @csrf
         <div>
             <label>Brand:</label>
@@ -44,6 +44,11 @@
         <div>
             <label>Price per Day (¥):</label>
             <input type="number" name="price_per_day" min="0" required>
+        </div>
+
+        <div>
+            <label for="image">Motorcycle Image:</label>
+            <input type="file" name="image" id="image">
         </div>
 
         <div>

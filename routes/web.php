@@ -33,7 +33,7 @@ Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('sh
 Route::middleware('auth')->group(function() {
 
     // バイクを追加
-    Route::get('/motorcycles/create', [MotorcycleController::class, 'create'])->name('createMotorcycle');
+    Route::get('/motorcycles/create/new', [MotorcycleController::class, 'create'])->name('createMotorcycle');
 
     // バイクを編集ページを表示
     Route::get('/motorcycles/{id}/edit', [MotorcycleController::class, 'edit'])->name('editMotorcycle');

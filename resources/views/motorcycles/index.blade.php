@@ -50,7 +50,7 @@
                         </a>
 
                         @auth
-                            <a href="{{ route('rentals.create', $moto->id) }}"
+                            <a href="{{ route('rentMotorcycle', $moto->id) }}"
                                class="bg-indigo-500 text-white px-3 py-1 rounded hover:bg-indigo-600 text-sm">
                                Rent
                             </a>

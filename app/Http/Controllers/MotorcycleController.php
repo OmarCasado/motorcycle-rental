@@ -35,9 +35,15 @@ class MotorcycleController extends Controller
             'color'         => 'required|string|max:50',
             'price_per_day' => 'required|integer|min:0',
             'is_available'  => 'nullable',
+            'image'         => 'nullable',
         ]);
 
         $validated['is_available'] = $request->has('is_available');
+
+        if($request->hasFile('image')) {
+            $path = $request->file('image')->store('motorcycles', 'public');
+            $validated['image_path'] = $path;
+        }
 
         Motorcycle::create($validated);
 
@@ -66,6 +72,11 @@ class MotorcycleController extends Controller
         ]);
 
         $validated['is_available'] = $request->has('is_available');
+
+        if($request->hasFile('image')) {
+            $path = $request->file('image')->store('motorcycles', 'public');
+            $motorcycle->image_path = $path;
+        }
 
         $motorcycle->update($validated);
 

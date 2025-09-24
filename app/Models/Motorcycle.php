@@ -14,6 +14,7 @@ class Motorcycle extends Model
         'color',
         'price_per_day',
         'is_available',
+        'image_path',
     ];
 
     public function brand(): BelongsTo

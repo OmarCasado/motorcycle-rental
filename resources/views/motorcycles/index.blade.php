@@ -17,7 +17,7 @@
                 <!-- Imagen -->
                 <a href="{{ route('showMotorcycle', $moto->id) }}">
                     <img
-                        src=""
+                        src="{{ $moto->image_path ? asset('storage/' . $moto->image_path) : asset('images/default.jpg') }}"
                         alt="{{ $moto->model }}"
                         class="w-full h-48 object-cover">
                 </a>

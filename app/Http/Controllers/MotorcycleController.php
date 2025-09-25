@@ -95,7 +95,9 @@ class MotorcycleController extends Controller
     {
         $motorcycle = Motorcycle::findOrFail($id);
 
-        Storage::disk('public')->delete($motorcycle->image_path);
+        if($motorcycle->image_path) {
+            Storage::disk('public')->delete($motorcycle->image_path);
+        }
 
         $motorcycle->delete();
 

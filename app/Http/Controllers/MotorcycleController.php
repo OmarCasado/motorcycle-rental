@@ -35,7 +35,7 @@ class MotorcycleController extends Controller
             'color'         => 'required|string|max:50',
             'price_per_day' => 'required|integer|min:0',
             'is_available'  => 'nullable',
-            'image'         => 'nullable',
+            'image'         => 'nullable|image|max:2048',
         ]);
 
         $validated['is_available'] = $request->has('is_available');
@@ -69,6 +69,7 @@ class MotorcycleController extends Controller
             'color'         => 'required|string|max:50',
             'price_per_day' => 'required|integer|min:0',
             'is_available'  => 'nullable',
+            'image'         => 'nullable|image|max:2048',
         ]);
 
         $validated['is_available'] = $request->has('is_available');

@@ -94,6 +94,9 @@ class MotorcycleController extends Controller
     public function delete($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
+
+        Storage::disk('public')->delete($motorcycle->image_path);
+
         $motorcycle->delete();
 
         return redirect()->route('topPage')

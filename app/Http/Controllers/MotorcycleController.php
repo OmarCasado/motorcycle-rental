@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Motorcycle;
 use App\Models\Brand;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class MotorcycleController extends Controller
 {
@@ -72,12 +73,17 @@ class MotorcycleController extends Controller
             'image'         => 'nullable|image|max:2048',
         ]);
 
-        $validated['is_available'] = $request->has('is_available');
 
         if($request->hasFile('image')) {
+            if($motorcycle->image_path && Storage::disk('public')->exists($motorcycle->image_path)) {
+                Storage::disk('public')->delete($motorcycle->image_path);
+            }
+
             $path = $request->file('image')->store('motorcycles', 'public');
-            $motorcycle->image_path = $path;
+            $validated['image_path'] = $path;
         }
+
+        $validated['is_available'] = $request->has('is_available');
 
         $motorcycle->update($validated);
 

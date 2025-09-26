@@ -13,7 +13,7 @@
     {{-- Cards Grid --}}
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         @foreach($motorcycles as $moto)
-            <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition">
+            <div class="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
                 <!-- Imagen -->
                 <a href="{{ route('showMotorcycle', $moto->id) }}">
                     <img

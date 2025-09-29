@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Auth;
 
 class RentalController extends Controller
 {
+    /**
+     * レンタル履歴ページを表示
+     */
     public function index(Request $request)
     {
         $rentals = Rental::with('motorcycle')
@@ -20,12 +23,18 @@ class RentalController extends Controller
         return view('rentals.index', compact('rentals'));
     }
 
+    /**
+     * レンタルフォームページを表示
+     */
     public function rent($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
         return view('motorcycles.rent', compact('motorcycle'));
     }
 
+    /**
+     * バイクをレンタルする
+     */
     public function reserve(Request $request, $id)
     {
         $request->validate([
@@ -90,6 +99,9 @@ class RentalController extends Controller
             ->with('success', "Reservation created. Total: ¥" . number_format($totalPrice));
     }
 
+    /**
+     * バイクのレンタルをキャンセル
+     */
     public function cancel($id)
     {
         $rental = Rental::findOrFail($id);

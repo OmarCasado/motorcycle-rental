@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class AdminUserController extends Controller
 {
+    /**
+     * ユ－ザ－一覧ページを表示
+     */
     public function index()
     {
         $users = User::orderBy('created_at', 'desc')->get();
@@ -14,6 +17,9 @@ class AdminUserController extends Controller
         return view('admin.users.index', compact('users'));
     }
 
+    /**
+     * ユ－ザ－権限を変更
+     */
     public function updateRole(Request $request, $id)
     {
         $request->validate([

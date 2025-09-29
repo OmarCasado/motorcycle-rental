@@ -9,24 +9,36 @@ use Illuminate\Support\Facades\Storage;
 
 class MotorcycleController extends Controller
 {
+    /**
+     * バイク一覧ページを表示
+     */
     public function index()
     {
         $motorcycles = Motorcycle::with('brand')->get();
         return view('motorcycles.index', compact('motorcycles'));
     }
 
+    /**
+     * 指定したIDのバイク詳細ページを表示
+     */
     public function show($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
         return view('motorcycles.show', compact('motorcycle'));
     }
 
+    /**
+     * バイク追加フォームページを表示
+     */
     public function create()
     {
         $brands = Brand::all();
         return view('motorcycles.create', compact('brands'));
     }
 
+    /**
+     * 新しいバイクを保存
+     */
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -52,6 +64,9 @@ class MotorcycleController extends Controller
             ->with('success', 'Motorcycle added successfully!');
     }
 
+    /**
+     * バイク編集フォームページを表示
+     */
     public function edit($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
@@ -59,6 +74,9 @@ class MotorcycleController extends Controller
         return view('motorcycles.edit', compact('motorcycle', 'brands'));
     }
 
+    /**
+     * バイク情報を更新
+     */
     public function update(Request $request, $id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
@@ -91,6 +109,9 @@ class MotorcycleController extends Controller
             ->with('success', 'Updated Successfully.');
     }
 
+    /**
+     * バイク情報を削除
+     */
     public function delete($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);

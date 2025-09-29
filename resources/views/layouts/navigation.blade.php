@@ -5,16 +5,28 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('topPage') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                    <x-nav-link :href="route('topPage')" :active="request()->routeIs('topPage')">
+                        Home
                     </x-nav-link>
+
+                    <x-nav-link :href="route('showMyRentals')" :active="request()->routeIs('showMyRentals')">
+                        My Rentals
+                    </x-nav-link>
+
+                    @auth
+                        @if(Auth::user()->role === 'admin')
+                        <x-nav-link :href="route('AdminShowRentals')" :active="request()->routeIs('AdminShowRentals')">
+                            All Rentals
+                        </x-nav-link>
+                        @endif
+                    @endauth
                 </div>
             </div>
 
@@ -37,18 +49,6 @@
                         <x-dropdown-link :href="route('profile.edit')">
                             {{ __('Profile') }}
                         </x-dropdown-link>
-
-                        <x-dropdown-link :href="route('showMyRentals')">
-                            My Rentals
-                        </x-dropdown-link>
-
-                        @auth
-                            @if(Auth::user()->role === 'admin')
-                                <x-dropdown-link :href="route('AdminShowRentals')">
-                                    All Rentals
-                                </x-dropdown-link>
-                            @endif
-                        @endauth
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}">
@@ -95,18 +95,6 @@
                 <x-responsive-nav-link :href="route('profile.edit')">
                     {{ __('Profile') }}
                 </x-responsive-nav-link>
-
-                <x-responsive-nav-link :href="route('showMyRentals')">
-                    My Rentals
-                </x-responsive-nav-link>
-
-                @auth
-                    @if(Auth::user()->role === 'admin')
-                        <x-responsive-nav-link :href="route('AdminShowRentals')">
-                            All Rentals
-                        </x-responsive-nav-link>
-                    @endif
-                @endauth
 
                 <!-- Authentication -->
                 <form method="POST" action="{{ route('logout') }}">

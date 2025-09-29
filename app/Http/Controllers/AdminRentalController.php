@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class AdminRentalController extends Controller
 {
+    /**
+     * 管理者レンタル画面を表示
+     */
     public function index(Request $request)
     {
         $rentals = Rental::with(['motorcycle', 'user'])

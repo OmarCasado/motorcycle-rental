@@ -18,10 +18,10 @@
 </head>
 
 <body class="m-0 bg-gray-800 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
-    <header>
-        <a href="index.html" id="brand_wrapper"> <!--ロゴとブランド名を含む div 要素。-->
-            <img src="images/own/brand-logo.png" alt="Brand Logo">
-            <h1>J.<span>O</span>.2 Bike Rental</h1>
+    <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10">
+        <a href="index.html" class="flex justify-center py-0 px-2 w-6 max-w max-w-[100vw]"> <!--ロゴとブランド名を含む div 要素。-->
+            <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125">
+            <h1 class="text-white hover:text-greenCustom">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
         </a>
 
         <nav id="top_nav"> <!--　ナヴィゲーション・バ－　-->
@@ -43,7 +43,7 @@
 
         <div id="background_video">
             <video autoplay loop muted>
-                <source src="videos/video_moto.mp4" type="video/mp4">
+                <source src="/videos/video_moto.mp4" type="video/mp4">
             </video>
         </div>
     </section>
@@ -51,13 +51,13 @@
     <aside> <!--最新ニュースを含むアサイド。-->
         <h3>BLOG</h3>
         <ul>
-            <li><a href="#"><img src="images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle">
+            <li><a href="#"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle">
                     <p>YAMAHA'S new upcoming</p>
                 </a></li>
-            <li><a href="#"><img src="images/o-dan/o-dan_solo.jpg" alt="Solo touring">
+            <li><a href="#"><img src="/images/o-dan/o-dan_solo.jpg" alt="Solo touring">
                     <p>What to pack for a touring?</p>
                 </a></li>
-            <li><a href="#"><img src="images/o-dan/o-dan_police.jpg" alt="Police information">
+            <li><a href="#"><img src="/images/o-dan/o-dan_police.jpg" alt="Police information">
                     <p>Police cracking down on speed</p>
                 </a></li>
         </ul>
@@ -67,21 +67,21 @@
         <h2> RIDE OUR NEW MODELS</h2>
         <div id="article_wrapper">
             <article>
-                <a href="#"><img src="images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250"></a>
+                <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250"></a>
                 <h3>KAWASAKI NINJA 250</h3>
                 <p>Available at all shops nationwide.</p>
                 <a class="reserve_button" href="#">RESERVE</a>
             </article>
 
             <article>
-                <a href="#"><img src="images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3"></a>
+                <a href="#"><img src="/images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3"></a>
                 <h3>YAMAHA R3</h3>
                 <p>Available at all shops nationwide.</p>
                 <a class="reserve_button" href="#">RESERVE</a>
             </article>
 
             <article>
-                <a href="#"><img src="images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire"></a>
+                <a href="#"><img src="/images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire"></a>
                 <h3>HARLEY-DAVIDSON LIVEWIRE</h3>
                 <p>At present only available in Tokio.</p>
                 <a class="reserve_button" href="#">RESERVE</a>

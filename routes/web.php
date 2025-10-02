@@ -26,6 +26,9 @@ require __DIR__.'/auth.php';
 // トップページ
 Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');
 
+// トップページ仮
+Route::get('/motorcycles-temp', [MotorcycleController::class, 'indextemp'])->name('topPageTemp');
+
 // 詳細ページ
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 

@@ -14,7 +14,16 @@ export default {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Monserrat', ...defaultTheme.fontFamily.sans],
+            },
+            colors : {
+                whiteCustom: "rgb(240,240,240)",
+                redCustom: "rgb(188,0,45)",
+                lightGray: "rgb(124,130,138)",
+                lightTransparentWhite: "rgba(255,255,255,0.5)",
+                darkGray: "rgb(56,58,59)",
+                backgroundColor: "rgb(240,240,232)",
+                greenCustom: "rgb(52,158,91)",
             },
         },
     },

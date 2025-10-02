@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">
@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="images/own/favicon-16x16.png">
+    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="road_background">
+<body class="m-0 bg-gray-800 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
     <header>
         <a href="index.html" id="brand_wrapper"> <!--ロゴとブランド名を含む div 要素。-->
             <img src="images/own/brand-logo.png" alt="Brand Logo">
@@ -23,11 +25,11 @@
         </a>
 
         <nav id="top_nav"> <!--　ナヴィゲーション・バ－　-->
-            <ul>
-                <li><a href="routes.html">Routes</a></li>
-                <li><a href="prices.html">Prices</a></li>
-                <li><a href="#">Sign in</a></li>
-                <li><a href="contact.html">Contact us</a></li>
+            <ul class="flex justify-evenly m-0 p-0">
+                <li class="px-[25px] leading-[70px]"><a href="routes.html" class="text-white  hover:text-greenCustom">Routes</a></li>
+                <li class="px-[25px] leading-[70px]"><a href="prices.html" class="text-white  hover:text-greenCustom">Prices</a></li>
+                <li class="px-[25px] leading-[70px]"><a href="#" class="text-white  hover:text-greenCustom">Sign in</a></li>
+                <li class="px-[25px] leading-[70px]"><a href="contact.html" class="text-white hover:text-greenCustom">Contact us</a></li>
             </ul>
         </nav>
     </header>

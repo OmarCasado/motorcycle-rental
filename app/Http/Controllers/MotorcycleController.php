@@ -19,6 +19,15 @@ class MotorcycleController extends Controller
     }
 
     /**
+     * トップページ仮
+     */
+    public function indextemp()
+    {
+        $motorcycles = Motorcycle::with('brand')->get();
+        return view('motorcycles.indextemp', compact('motorcycles'));
+    }
+
+    /**
      * 指定したIDのバイク詳細ページを表示
      */
     public function show($id)

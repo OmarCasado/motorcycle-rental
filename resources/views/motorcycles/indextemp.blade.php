@@ -34,11 +34,11 @@
         </nav>
     </header>
 
-    <section id="main"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
-        <div id="main_info">
+    <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen animate-main-image"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
+        <div id="main_info" class="text-white ">
             <h2>IF THE ROAD IS YOUR GOAL</h2>
-            <p>RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
-            <a href="#">RESERVE</a>
+            <p class="text-sm max-[1300px]:text-base max-[1100px]:text-xs">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
+            <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>
         </div>
 
         <div id="background_video">

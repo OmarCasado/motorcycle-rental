@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* アニメーション */
+@keyframes main-image {
+  0% {
+    background-image: url("/images/o-dan/o-dan_transition2.jpg");
+  }
+  50% {
+    background-image: url("/images/o-dan/o-dan_transition1.jpg");
+  }
+  100% {
+    background-image: url("/images/o-dan/o-dan_transition3.jpg");
+  }
+}
+
+.animate-main-image {
+  animation: main-image 10s infinite both alternate;
+}

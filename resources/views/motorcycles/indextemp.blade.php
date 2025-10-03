@@ -24,7 +24,8 @@
             <h1 class="text-white hover:text-greenCustom">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
         </a>
 
-        <nav id="top_nav"> <!--　ナヴィゲーション・バ－　-->
+        <!--　ナヴィゲーション・バ－　-->
+        <nav id="top_nav">
             <ul class="flex justify-evenly m-0 p-0">
                 <li class="px-[25px] leading-[70px]"><a href="routes.html" class="text-white  hover:text-greenCustom">Routes</a></li>
                 <li class="px-[25px] leading-[70px]"><a href="prices.html" class="text-white  hover:text-greenCustom">Prices</a></li>
@@ -34,7 +35,8 @@
         </nav>
     </header>
 
-    <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen animate-main-image"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
+    <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
+    <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen animate-main-image">
         <div id="main_info" class="text-white ">
             <h2>IF THE ROAD IS YOUR GOAL</h2>
             <p class="text-sm max-[1300px]:text-base max-[1100px]:text-xs">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
@@ -48,7 +50,8 @@
         </div>
     </section>
 
-    <aside> <!--最新ニュースを含むアサイド。-->
+    <!--最新ニュースを含むアサイド。-->
+    <aside>
         <h3>BLOG</h3>
         <ul>
             <li><a href="#"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle">
@@ -63,7 +66,8 @@
         </ul>
     </aside>
 
-    <section id="new_models"> <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
+    <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
+    <section id="new_models">
         <h2> RIDE OUR NEW MODELS</h2>
         <div id="article_wrapper">
             <article>
@@ -89,7 +93,8 @@
         </div>
     </section>
 
-    <section id="about"> <!--ブランドのヴァリューをまとめるセクション。-->
+    <!--ブランドのヴァリューをまとめるセクション。-->
+    <section id="about">
         <h2>ABOUT US</h2>
         <div id="about_wrapper">
 

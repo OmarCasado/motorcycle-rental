@@ -43,8 +43,8 @@
             <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>
         </div>
 
-        <div id="background_video">
-            <video autoplay loop muted>
+        <div id="background_video" class="absolute -z-10 w-full h-full max-[900px]:hidden">
+            <video autoplay loop muted class="w-full">
                 <source src="/videos/video_moto.mp4" type="video/mp4">
             </video>
         </div>

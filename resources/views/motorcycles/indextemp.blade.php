@@ -38,7 +38,7 @@
     <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
     <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen animate-main-image">
         <div id="main_info" class="text-white ">
-            <h2>IF THE ROAD IS YOUR GOAL</h2>
+            <h2 class="m-0 text-5xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
             <p class="text-sm max-[1300px]:text-base max-[1100px]:text-xs">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
             <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>
         </div>
@@ -68,7 +68,7 @@
 
     <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
     <section id="new_models">
-        <h2> RIDE OUR NEW MODELS</h2>
+        <h2 class="m-0 text-5xl"> RIDE OUR NEW MODELS</h2 class="m-0 text-5xl">
         <div id="article_wrapper">
             <article>
                 <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250"></a>
@@ -95,7 +95,7 @@
 
     <!--ブランドのヴァリューをまとめるセクション。-->
     <section id="about">
-        <h2>ABOUT US</h2>
+        <h2 class="m-0 text-5xl">ABOUT US</h2 class="m-0 text-5xl">
         <div id="about_wrapper">
 
             <div id="about_card1">

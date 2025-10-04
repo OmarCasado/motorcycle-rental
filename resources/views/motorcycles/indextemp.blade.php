@@ -51,17 +51,17 @@
     </section>
 
     <!--最新ニュースを含むアサイド。-->
-    <aside>
-        <h3>BLOG</h3>
-        <ul>
-            <li><a href="#"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle">
-                    <p>YAMAHA'S new upcoming</p>
+    <aside class="flex flex-col justify-center w-[20%] absolute top-[150px] bg-white/50 p-2 ml-[10px] text-center rounded-[50px] max-[900]:relative max-[900]:w-full max-[900]:p-[10px] max-[900]:m-0 max-[900]:-top-[10px] max-[900]:-z-10 max-[900]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900]:bg-center max-[900]:bg-cover max-[900]:bg-fixed">
+        <h3 class="m-0 p-0 max-[900]:p-[25px] max-[900]:text-2xl max-[900]:text-white">BLOG</h3>
+        <ul class="m-0 p-2">
+            <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_var(--darkGrey)] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+                    <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">YAMAHA'S new upcoming</p>
                 </a></li>
-            <li><a href="#"><img src="/images/o-dan/o-dan_solo.jpg" alt="Solo touring">
-                    <p>What to pack for a touring?</p>
+            <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_solo.jpg" alt="Solo touring" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_var(--darkGrey)] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+                    <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">What to pack for a touring?</p>
                 </a></li>
-            <li><a href="#"><img src="/images/o-dan/o-dan_police.jpg" alt="Police information">
-                    <p>Police cracking down on speed</p>
+            <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_police.jpg" alt="Police information" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_var(--darkGrey)] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+                    <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">Police cracking down on speed</p>
                 </a></li>
         </ul>
     </aside>

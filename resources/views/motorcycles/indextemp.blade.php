@@ -70,25 +70,25 @@
     <section id="new_models" class="text-center bg-darkGray text-white h-screen">
         <h2 class="m-0 text-5xl pt-12 mb-12"> RIDE OUR NEW MODELS</h2>
         <div id="article_wrapper" class="flex justify-center">
-            <article class="">
-                <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250"></a>
-                <h3>KAWASAKI NINJA 250</h3>
-                <p>Available at all shops nationwide.</p>
-                <a class="reserve_button" href="#">RESERVE</a>
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+                <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250" class="w-[370px] hover:scale-125 transition"></a>
+                <h3 class="text-left ml-[10px] mb-[10px]">KAWASAKI NINJA 250</h3>
+                <p class="m-0">Available at all shops nationwide.</p>
+                <a id="reserve_button" href="#" class="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
 
-            <article>
-                <a href="#"><img src="/images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3"></a>
-                <h3>YAMAHA R3</h3>
-                <p>Available at all shops nationwide.</p>
-                <a class="reserve_button" href="#">RESERVE</a>
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+                <a href="#"><img src="/images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3" class="w-[370px] hover:scale-125 transition"></a>
+                <h3 class="text-left ml-[10px] mb-[10px]">YAMAHA R3</h3>
+                <p class="m-0">Available at all shops nationwide.</p>
+                <a id="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
 
-            <article>
-                <a href="#"><img src="/images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire"></a>
-                <h3>HARLEY-DAVIDSON LIVEWIRE</h3>
-                <p>At present only available in Tokio.</p>
-                <a class="reserve_button" href="#">RESERVE</a>
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+                <a href="#"><img src="/images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire" class="w-[370px] hover:scale-125 transition"></a>
+                <h3 class="text-left ml-[10px] mb-[10px]">HARLEY-DAVIDSON LIVEWIRE</h3>
+                <p class="m-0">At present only available in Tokio.</p>
+                <a id="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
         </div>
     </section>

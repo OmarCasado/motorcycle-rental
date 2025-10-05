@@ -67,10 +67,10 @@
     </aside>
 
     <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
-    <section id="new_models">
-        <h2 class="m-0 text-5xl"> RIDE OUR NEW MODELS</h2 class="m-0 text-5xl">
-        <div id="article_wrapper">
-            <article>
+    <section id="new_models" class="text-center bg-darkGray text-white h-screen">
+        <h2 class="m-0 text-5xl pt-12 mb-12"> RIDE OUR NEW MODELS</h2>
+        <div id="article_wrapper" class="flex justify-center">
+            <article class="">
                 <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250"></a>
                 <h3>KAWASAKI NINJA 250</h3>
                 <p>Available at all shops nationwide.</p>

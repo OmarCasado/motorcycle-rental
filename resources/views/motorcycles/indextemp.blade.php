@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" sizes="16x16" href="images/own/favicon-16x16.png">
-    <!-- @vite(['resources/css/app.css', 'resources/js/app.js']) -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -74,7 +74,7 @@
                 <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250" class="w-[370px] hover:scale-125 transition"></a>
                 <h3 class="text-left ml-[10px] mb-[10px]">KAWASAKI NINJA 250</h3>
                 <p class="m-0">Available at all shops nationwide.</p>
-                <a id="reserve_button" href="#" class="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
+                <a id="reserve_button" href="#" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
 
             <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">

@@ -51,8 +51,8 @@
     </section>
 
     <!--最新ニュースを含むアサイド。-->
-    <aside class="flex flex-col justify-center w-[20%] absolute top-[150px] bg-white/50 p-2 ml-[10px] text-center rounded-[50px] max-[900]:relative max-[900]:w-full max-[900]:p-[10px] max-[900]:m-0 max-[900]:-top-[10px] max-[900]:-z-10 max-[900]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900]:bg-center max-[900]:bg-cover max-[900]:bg-fixed">
-        <h3 class="m-0 p-0 max-[900]:p-[25px] max-[900]:text-2xl max-[900]:text-white">BLOG</h3>
+    <aside class="flex flex-col justify-center w-[20%] absolute top-[150px] bg-white/50 p-2 ml-[10px] text-center rounded-[50px] max-[900px]:relative max-[900px]:w-full max-[900px]:p-[10px] max-[900px]:m-0 max-[900px]:-top-[10px] max-[900px]:-z-10 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
+        <h3 class="m-0 p-0 max-[900px]:p-[25px] max-[900px]:text-2xl max-[900px]:text-white">BLOG</h3>
         <ul class="m-0 p-2">
             <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_var(--darkGrey)] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
                     <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">YAMAHA'S new upcoming</p>
@@ -67,28 +67,28 @@
     </aside>
 
     <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
-    <section id="new_models" class="text-center bg-darkGray text-white h-screen">
+    <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
         <h2 class="m-0 text-5xl pt-12 mb-12"> RIDE OUR NEW MODELS</h2>
-        <div id="article_wrapper" class="flex justify-center">
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+        <div id="article_wrapper" class="flex justify-center max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
                 <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250" class="w-[370px] hover:scale-125 transition"></a>
                 <h3 class="text-left ml-[10px] mb-[10px]">KAWASAKI NINJA 250</h3>
                 <p class="m-0">Available at all shops nationwide.</p>
-                <a id="reserve_button" href="#" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
+                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
 
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
                 <a href="#"><img src="/images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3" class="w-[370px] hover:scale-125 transition"></a>
                 <h3 class="text-left ml-[10px] mb-[10px]">YAMAHA R3</h3>
                 <p class="m-0">Available at all shops nationwide.</p>
-                <a id="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
+                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
 
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray">
+            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
                 <a href="#"><img src="/images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire" class="w-[370px] hover:scale-125 transition"></a>
                 <h3 class="text-left ml-[10px] mb-[10px]">HARLEY-DAVIDSON LIVEWIRE</h3>
                 <p class="m-0">At present only available in Tokio.</p>
-                <a id="reserve_button" href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
+                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
             </article>
         </div>
     </section>

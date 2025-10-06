@@ -19,7 +19,7 @@
 
 <body class="m-0 bg-gray-800 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
     <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10">
-        <a href="index.html" class="flex justify-center py-0 px-2 w-6 max-w max-w-[100vw]"> <!--ロゴとブランド名を含む div 要素。-->
+        <a href="index.html" class="flex px-[10px] w-[26rem] max-w-[100vw] justify-center"> <!--ロゴとブランド名を含む div 要素。-->
             <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125">
             <h1 class="text-white hover:text-greenCustom">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
         </a>
@@ -36,7 +36,7 @@
     </header>
 
     <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
-    <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen animate-main-image">
+    <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen max-[900px]:animate-main-image">
         <div id="main_info" class="text-white ">
             <h2 class="m-0 text-5xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
             <p class="text-sm max-[1300px]:text-base max-[1100px]:text-xs">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>

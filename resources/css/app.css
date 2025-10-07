@@ -18,3 +18,27 @@
 .animate-main-image {
   animation: main-image 10s infinite both alternate;
 }
+
+@keyframes about_image {
+  0% {
+    background-image: url("/images/o-dan/o-dan_faraway.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  50% {
+    background-image: url("/images/o-dan/o-dan_discover.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  100% {
+    background-image: url("/images/o-dan/o-dan_mix.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.animate-about-image {
+  animation: about-image 10s infinite both alternate;
+}

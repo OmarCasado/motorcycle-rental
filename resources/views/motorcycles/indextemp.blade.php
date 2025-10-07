@@ -21,7 +21,7 @@
     <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10">
         <a href="index.html" class="flex px-[10px] w-[26rem] max-w-[100vw] justify-center"> <!--ロゴとブランド名を含む div 要素。-->
             <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125">
-            <h1 class="text-white hover:text-greenCustom">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
+            <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
         </a>
 
         <!--　ナヴィゲーション・バ－　-->

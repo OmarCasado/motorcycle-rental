@@ -18,19 +18,19 @@
 </head>
 
 <body class="m-0 bg-gray-800 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
-    <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10">
+    <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10 max-[900px]:bg-transparent max-[900px]:flex max-[900px]:justify-center max-[900px]:content-center max-[900px]:flex-col max-[900px]:absolute">
         <a href="index.html" class="flex px-[10px] w-[26rem] max-w-[100vw] justify-center"> <!--ロゴとブランド名を含む div 要素。-->
-            <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125">
-            <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
+            <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125 max-[960px]:scale-75 max-[900px]:filter-none max-[900px]:w-[25%] max-[900px]:h-auto max-[900px]:scale-[0.7]">
+            <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px] max-[900px]:text-darkGray max-[900px]:text-[1.8rem]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
         </a>
 
         <!--　ナヴィゲーション・バ－　-->
         <nav id="top_nav">
             <ul class="flex justify-evenly m-0 p-0">
-                <li class="px-[25px] leading-[70px]"><a href="routes.html" class="text-white  hover:text-greenCustom">Routes</a></li>
-                <li class="px-[25px] leading-[70px]"><a href="prices.html" class="text-white  hover:text-greenCustom">Prices</a></li>
-                <li class="px-[25px] leading-[70px]"><a href="#" class="text-white  hover:text-greenCustom">Sign in</a></li>
-                <li class="px-[25px] leading-[70px]"><a href="contact.html" class="text-white hover:text-greenCustom">Contact us</a></li>
+                <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="routes.html" class="text-white  hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Routes</a></li>
+                <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="prices.html" class="text-white  hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Prices</a></li>
+                <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="#" class="text-white  hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Sign in</a></li>
+                <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="contact.html" class="text-white hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Contact us</a></li>
             </ul>
         </nav>
     </header>
@@ -96,9 +96,9 @@
     <!--ブランドのヴァリューをまとめるセクション。-->
     <section id="about">
         <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5">ABOUT US</h2>
-        <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto">
+        <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto max-[900px]:flex-col max-[900px]:h-auto">
 
-            <div id="about_card1" class="w-[35%] h-[70%] overflow-overlay bg-darkGray rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray text-left p-[10px] mb-[20px]">
+            <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px]">
                 <h3>Japan On 2 Wheels</h3>
                 <p>Japan is a country with an exceptional culture and landscapes that surpass imagination. Much of the
                     tourism is concentrated in metropolitan areas, such as the greater Tokyo area or Osaka city, due to

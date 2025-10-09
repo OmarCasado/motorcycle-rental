@@ -37,7 +37,7 @@
 
     <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
     <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen max-[900px]:animate-main-image">
-        <div id="main_info" class="text-white ">
+        <div id="main_info" class="text-white max-[900px]:absolute max-[900px]:block max-[900px]:bg-lightTransparentWhite max-[900px]:text-darkGray max-[900px]:m-5 max-[900px]:p-2.5 max-[900px]:rounded-[20px]">
             <h2 class="m-0 text-5xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
             <p class="text-sm max-[1300px]:text-base max-[1100px]:text-xs">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
             <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>

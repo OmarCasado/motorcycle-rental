@@ -25,16 +25,6 @@ export default {
                 backgroundColor: "rgb(240,240,232)",
                 greenCustom: "rgb(52,158,91)",
             },
-            keyframes: {
-                'about-image': {
-                    '0%': { backgroundImage: 'url("/images/o-dan/o-dan_about1.jpg")' },
-                    '50%': { backgroundImage: 'url("/images/o-dan/o-dan_about2.jpg")' },
-                    '100%': { backgroundImage: 'url("/images/o-dan/o-dan_about3.jpg")' },
-                },
-            },
-            animation: {
-                'about-image': 'about-image 20s infinite alternate',
-            },
         },
     },
 

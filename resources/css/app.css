@@ -3,21 +3,28 @@
 @tailwind utilities;
 
 /* アニメーション */
-@keyframes main-image {
-  0% {
-    background-image: url("/images/o-dan/o-dan_transition2.jpg");
+@media (max-width: 900px) {
+    #main {
+    animation: main_image 10s infinite both alternate;
   }
-  50% {
-    background-image: url("/images/o-dan/o-dan_transition1.jpg");
-  }
-  100% {
-    background-image: url("/images/o-dan/o-dan_transition3.jpg");
+
+  /* イメージのtransitionを作る */
+  @keyframes main_image {
+    0% {
+      background-image: url("../images/o-dan/o-dan_transition2.jpg");
+    }
+
+    50% {
+      background-image: url("../images/o-dan/o-dan_transition1.jpg");
+    }
+
+    100% {
+      background-image: url("../images/o-dan/o-dan_transition3.jpg");
+    }
   }
 }
 
-.animate-main-image {
-  animation: main-image 10s infinite both alternate;
-}
+/* アニメーション */
 
 @keyframes about_image {
   0% {

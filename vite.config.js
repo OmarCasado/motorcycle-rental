@@ -12,5 +12,8 @@ export default defineConfig({
         hmr: {
             host: 'localhost',
         },
+        fs: {
+            allow: ['resources', 'public'],
+        },
     },
 });

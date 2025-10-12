@@ -11,15 +11,15 @@
   /* イメージのtransitionを作る */
   @keyframes main_image {
     0% {
-      background-image: url("../../public/images/o-dan/o-dan_transition2.jpg");
+      background-image: url("/images/o-dan/o-dan_transition2.jpg");
     }
 
     50% {
-      background-image: url("../../public/images/o-dan/o-dan_transition1.jpg");
+      background-image: url("/images/o-dan/o-dan_transition1.jpg");
     }
 
     100% {
-      background-image: url("../../public/images/o-dan/o-dan_transition3.jpg");
+      background-image: url("/images/o-dan/o-dan_transition3.jpg");
     }
   }
 }

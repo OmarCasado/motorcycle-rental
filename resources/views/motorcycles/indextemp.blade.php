@@ -17,14 +17,14 @@
 </head>
 
 <body class="m-0 bg-gray-800 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
-    <header class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10 max-[900px]:bg-transparent max-[900px]:flex max-[900px]:justify-center max-[900px]:content-center max-[900px]:flex-col max-[900px]:absolute">
-        <a href="index.html" class="flex px-[10px] w-[26rem] max-w-[100vw] justify-center"> <!--ロゴとブランド名を含む div 要素。-->
-            <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125 max-[960px]:scale-75 max-[900px]:filter-none max-[900px]:w-[25%] max-[900px]:h-auto max-[900px]:scale-[0.7]">
-            <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px] max-[900px]:text-darkGray max-[900px]:text-[1.8rem]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
-        </a>
-
+    <header>
         <!--　ナヴィゲーション・バ－　-->
-        <nav id="top_nav">
+        <nav id="top_nav" class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10 max-[900px]:bg-transparent max-[900px]:flex max-[900px]:justify-center max-[900px]:content-center max-[900px]:flex-col max-[900px]:absolute">
+            <a href="index.html" class="flex px-[10px] w-[26rem] max-w-[100vw] justify-center"> <!--ロゴとブランド名を含む div 要素。-->
+                <img src="/images/own/logo.png" alt="Brand Logo" class="scale-105 max-w-full h-auto hover:scale-125 max-[960px]:scale-75 max-[900px]:filter-none max-[900px]:w-[25%] max-[900px]:h-auto max-[900px]:scale-[0.7]">
+                <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px] max-[900px]:text-darkGray max-[900px]:text-[1.8rem]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
+            </a>
+
             <ul class="flex justify-evenly m-0 p-0">
                 <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="routes.html" class="text-white  hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Routes</a></li>
                 <li class="px-[25px] leading-[70px] max-[900px]:px-[10px] max-[900px]:leading-[0]"><a href="prices.html" class="text-white  hover:text-greenCustom max-[1300px]:text-[0.9rem] max-[900px]:text-darkGray">Prices</a></li>

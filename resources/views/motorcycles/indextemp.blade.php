@@ -97,7 +97,7 @@
         <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5">ABOUT US</h2>
         <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto max-[900px]:flex-col max-[900px]:h-auto">
 
-            <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px]">
+            <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px] max-[900px]:w-[90%]">
                 <h3>Japan On 2 Wheels</h3>
                 <p>Japan is a country with an exceptional culture and landscapes that surpass imagination. Much of the
                     tourism is concentrated in metropolitan areas, such as the greater Tokyo area or Osaka city, due to
@@ -112,7 +112,7 @@
                 </p>
             </div>
 
-            <div id="about_card2" class="w-[60%] h-[550px] rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray"></div>
+            <div id="about_card2" class="w-[60%] h-[550px] rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray max-[900px]:w-[90%] max-[900px]:mb-[20px]"></div>
         </div>
     </section>
 

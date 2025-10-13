@@ -112,8 +112,7 @@
                 </p>
             </div>
 
-            <div id="about_card2" class="w-[60%] h-[550px] rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray animate-about-image" >
-            </div>
+            <div id="about_card2" class="w-[60%] h-[550px] rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray"></div>
         </div>
     </section>
 

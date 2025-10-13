@@ -67,7 +67,7 @@
 
     <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
     <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
-        <h2 class="m-0 text-5xl pt-12 mb-12"> RIDE OUR NEW MODELS</h2>
+        <h2 class="m-0 text-5xl pt-12 mb-12 max-[900px]:text-2xl"> RIDE OUR NEW MODELS</h2>
         <div id="article_wrapper" class="flex justify-center max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
             <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
                 <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250" class="w-[370px] hover:scale-125 transition"></a>
@@ -94,7 +94,7 @@
 
     <!--ブランドのヴァリューをまとめるセクション。-->
     <section id="about">
-        <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5">ABOUT US</h2>
+        <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5 max-[900px]:text-2xl">ABOUT US</h2>
         <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto max-[900px]:flex-col max-[900px]:h-auto">
 
             <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px] max-[900px]:w-[90%]">

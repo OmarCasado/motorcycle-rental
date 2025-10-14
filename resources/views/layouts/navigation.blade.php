@@ -49,27 +49,14 @@
                             <x-nav-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">
                                 Log Out
                             </x-nav-link>
+                        @else
+                            <x-nav-link :href="route('login')">
+                                Login
+                            </x-nav-link>
                         @endif
                     </form>
                 </div>
             </div>
-
-            <!-- Welcome Message -->
-                <div class="hidden sm:flex sm:items-center sm:ms-6">
-                    <x-dropdown align="right" width="48">
-                        <x-slot name="trigger">
-                            @if(Auth::check())
-                                <span class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white">
-                                    <div>Welcome, {{ Auth::check() ? Auth::user()->name : '' }}!</div>
-                                </span>
-                            @else
-                                <x-nav-link :href="route('login')">
-                                    Login
-                                </x-nav-link>
-                            @endif
-                        </x-slot>
-                    </x-dropdown>
-                </div>
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">

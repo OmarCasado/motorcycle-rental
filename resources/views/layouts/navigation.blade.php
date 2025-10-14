@@ -2,8 +2,6 @@
 <nav x-data="{ open: false }" id="top_nav" class="flex justify-between h-[70px] bg-darkGray fixed w-full z-10 max-[900px]:bg-transparent max-[900px]:flex max-[900px]:justify-center max-[900px]:content-center max-[900px]:flex-col max-[900px]:absolute">
     <!-- Primary Navigation Menu -->
     <div class="w-full mx-auto px-4 sm:px-6 lg:px-8 flex justify-between">
-        <div class="flex h-16">
-            <div class="flex">
                 <!--ロゴとブランド名を含む-->
                 <div class="shrink-0 flex justify-center">
                     <a href="{{ route('topPage') }}" class="flex px-[10px] w-[26rem] max-w-[100vw]">
@@ -56,7 +54,6 @@
                         @endif
                     </form>
                 </div>
-            </div>
 
             <!-- Hamburger -->
             <div class="-me-2 flex items-center sm:hidden">
@@ -67,7 +64,6 @@
                     </svg>
                 </button>
             </div>
-        </div>
     </div>
 
     <!-- Responsive Navigation Menu -->

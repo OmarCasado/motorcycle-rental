@@ -68,27 +68,84 @@
     <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
     <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
         <h2 class="m-0 text-5xl pt-12 mb-12 max-[900px]:text-2xl"> RIDE OUR NEW MODELS</h2>
-        <div id="article_wrapper" class="flex justify-center max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
-                <a href="#"><img src="/images/o-dan/o-dan_kawasaki_transparent.png" alt="Kawasaki Ninja 250" class="w-[370px] hover:scale-125 transition"></a>
-                <h3 class="text-left ml-[10px] mb-[10px]">KAWASAKI NINJA 250</h3>
-                <p class="m-0">Available at all shops nationwide.</p>
-                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
-            </article>
+        {{-- Cards Grid --}}
+        <div class="flex justify-center gap-10 max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
+            @foreach($motorcycles as $moto)
+                <div class="border border-lightGray rounded-[25px] w-[350px] h-[500px] bg-gradient-to-b from-lightGray to-darkGray shadow-md hover:shadow-lg transition relative flex flex-col justify-start items-center max-[900px]:mb-[20px]">
 
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
-                <a href="#"><img src="/images/o-dan/o-dan_yamaha_r3_transparent.png" alt="Yamaha R3" class="w-[370px] hover:scale-125 transition"></a>
-                <h3 class="text-left ml-[10px] mb-[10px]">YAMAHA R3</h3>
-                <p class="m-0">Available at all shops nationwide.</p>
-                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
-            </article>
+                    <!-- Image -->
+                    <a href="{{ route('showMotorcycle', $moto->id) }}" class="w-full">
+                        <img
+                            src="{{ $moto->image_path ? asset('storage/' . $moto->image_path) : asset('images/default.jpg') }}"
+                            alt="{{ $moto->model }}"
+                            class="w-[370px] hover:scale-125 transition">
+                    </a>
 
-            <article class="border border-lightGray rounded-[25px] mx-[30px] w-[350px] h-[420px] relative flex flex-col justify-center items-center bg-gradient-to-b from-lightGray to-darkGray max-[900px]:mb-[20px]">
-                <a href="#"><img src="/images/o-dan/o-dan_harley_livewire_transparent.png" alt="Harley Davidson Livewire" class="w-[370px] hover:scale-125 transition"></a>
-                <h3 class="text-left ml-[10px] mb-[10px]">HARLEY-DAVIDSON LIVEWIRE</h3>
-                <p class="m-0">At present only available in Tokio.</p>
-                <a href="#" class="block no-underline text-whiteCustom bg-redCustom w-[100px] p-[10px] rounded-[10px] my-[10px] mx-auto hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">RESERVE</a>
-            </article>
+                    <!-- Contents -->
+                    <div class="p-4 text-left w-full">
+                        <h2 class="text-lg font-bold mb-2 text-white">
+                            {{ strtoupper($moto->brand->name ?? 'N/A') }} {{ strtoupper($moto->model) }}
+                        </h2>
+
+                        <p class="text-sm text-white">Year: {{ $moto->year }}</p>
+                        <p class="text-sm text-white">Color: {{ $moto->color }}</p>
+                        <p class="text-sm text-white font-semibold mt-2">
+                            ¥{{ number_format($moto->price_per_day) }}/day
+                        </p>
+
+                        {{-- Availability --}}
+                        <div class="mt-2">
+                            @if($moto->is_available)
+                                <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Available</span>
+                            @else
+                                <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">Not Available</span>
+                            @endif
+                        </div>
+
+                        {{-- Buttons --}}
+                        <div class="mt-4 flex gap-1" >
+                            {{-- View --}}
+                            <a href="{{ route('showMotorcycle', $moto->id) }}"
+                            class="block no-underline text-whiteCustom bg-blue-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
+                                    hover:bg-blue-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)]
+                                    transition duration-200 ease-in text-center text-sm">
+                                View
+                            </a>
+
+                            @auth
+                                {{-- Rent --}}
+                                <a href="{{ route('rentMotorcycle', $moto->id) }}"
+                                class="block no-underline text-whiteCustom bg-green-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
+                                        hover:bg-green-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
+                                        transition duration-200 ease-in text-center text-sm">
+                                    Rent
+                                </a>
+
+                                {{-- Edit --}}
+                                <a href="{{ route('editMotorcycle', $moto->id) }}"
+                                class="block no-underline text-whiteCustom bg-yellow-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
+                                        hover:bg-yellow-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
+                                        transition duration-200 ease-in text-center text-sm">
+                                    Edit
+                                </a>
+
+                                {{-- Delete --}}
+                                <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST"
+                                    onsubmit="return confirm('Are you sure?')" class="mx-auto">
+                                    @csrf
+                                    <button type="submit"
+                                            class="block w-[80px] p-[8px] rounded-[8px] mx-auto 
+                                                bg-red-500 text-whiteCustom 
+                                                hover:bg-red-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
+                                                transition duration-200 ease-in text-center text-sm">
+                                        Delete
+                                    </button>
+                                </form>
+                            @endauth
+                        </div>
+                    </div>
+                </div>
+            @endforeach
         </div>
     </section>
 

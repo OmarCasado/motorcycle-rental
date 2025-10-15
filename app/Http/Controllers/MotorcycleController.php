@@ -10,21 +10,12 @@ use Illuminate\Support\Facades\Storage;
 class MotorcycleController extends Controller
 {
     /**
-     * バイク一覧ページを表示
+     * トップページ
      */
     public function index()
     {
         $motorcycles = Motorcycle::with('brand')->get();
         return view('motorcycles.index', compact('motorcycles'));
-    }
-
-    /**
-     * トップページ仮
-     */
-    public function indextemp()
-    {
-        $motorcycles = Motorcycle::with('brand')->get();
-        return view('motorcycles.indextemp', compact('motorcycles'));
     }
 
     /**

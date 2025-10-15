@@ -17,16 +17,14 @@
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="font-sans antialiased">
-        <div>
-            <!-- Page Heading -->
-            <header>
-                @include('layouts.navigation')
-            </header>
+        <!-- Page Heading -->
+        <header>
+            @include('layouts.navigation')
+        </header>
 
-            <!-- Page Content -->
-            <main>
-                @yield('content')
-            </main>
-        </div>
+        <!-- Page Content -->
+        <main>
+            @yield('content')
+        </main>
     </body>
 </html>

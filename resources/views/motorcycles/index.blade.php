@@ -145,7 +145,7 @@
     <div>
         <small class="ml-5 text-white">© 2023 Japan On 2 Wheels @.C.H.</small>
     </div>
-    <div id="goback" class="w-[50px] h-[50px] leading-[50px] text-center bg-redCustom rounded-[30px] mr-[20px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
+    <div id="goTop" class="w-[50px] h-[50px] leading-[50px] text-center bg-redCustom rounded-[30px] mr-[20px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
         <a href="#">
             <i class="fa-solid fa-angles-up fa-beat-fade fa-xl text-white"></i>
         </a>

@@ -9,6 +9,7 @@
 
         <link rel="icon" type="image/png" sizes="16x16" href="images/own/favicon-16x16.png">
         <!-- Fonts -->
+        <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 

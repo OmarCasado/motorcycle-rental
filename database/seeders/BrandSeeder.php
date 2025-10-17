@@ -18,6 +18,9 @@ class BrandSeeder extends Seeder
             ['name' => 'Suzuki'],
             ['name' => 'Yamaha'],
             ['name' => 'Kawasaki'],
+            ['name' => 'Harley-Davidson'],
+            ['name' => 'Triumph'],
+            ['name' => 'Duke'],
         ]);
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container pt-[80px]">
     <h1>{{ $motorcycle->brand }} {{ $motorcycle->model }}</h1>
 
     <ul>

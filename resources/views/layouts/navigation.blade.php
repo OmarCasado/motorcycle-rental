@@ -40,7 +40,7 @@
                 My Profile
             </x-nav-link>
 
-            <x-nav-link :href="route('topPage')">
+            <x-nav-link :href="route('contactUs')">
                 Contact Us
             </x-nav-link>
 
@@ -107,7 +107,7 @@
                     My Profile
                 </x-responsive-nav-link>
 
-                <x-responsive-nav-link :href="route('topPage')">
+                <x-responsive-nav-link :href="route('contactUs')">
                     Contact Us
                 </x-responsive-nav-link>
 

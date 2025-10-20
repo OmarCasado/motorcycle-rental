@@ -29,6 +29,9 @@ Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPag
 // 詳細ページ
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 
+// お問い合わせページ
+Route::get('/motorcycles/contact-us', [MotorcycleController::class, 'contact'])->name('contactUs');
+
 // 認証
 Route::middleware('auth')->group(function() {
 

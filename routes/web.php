@@ -6,6 +6,7 @@ use App\Http\Controllers\MotorcycleController;
 use App\Http\Controllers\RentalController;
 use App\Http\Controllers\AdminRentalController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\ContactController;
 
 Route::get('/', function () {
     return redirect()->route('topPage');
@@ -30,7 +31,7 @@ Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPag
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 
 // お問い合わせページ
-Route::get('/motorcycles/contact-us', [MotorcycleController::class, 'contact'])->name('contactUs');
+Route::get('/motorcycles/contact-us', [ContactController::class, 'index'])->name('contactUs');
 
 // 認証
 Route::middleware('auth')->group(function() {

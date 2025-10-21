@@ -1,37 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.app')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
-    <meta name="description" content="これは HTMLCSS の課題作品です。">
-    <title>Japan on 2 Wheels</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link href="https://use.fontawesome.com/releases/v6.4.2/css/all.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/own/favicon-16x16.png">
-</head>
+@section('content')
 
-<body class="white_background">
-    <header>
-        <a href="index.html" id="brand_wrapper"> <!--ロゴとブランド名を含む div 要素。-->
-            <img src="images/own/brand-logo.png" alt="Brand Logo">
-            <h1>J.<span>O</span>.2 Bike Rental</h1>
-        </a>
-
-        <nav id="top_nav"> <!--　ナヴィゲーション・バ－　-->
-            <ul>
-                <li><a href="routes.html">Routes</a></li>
-                <li><a href="prices.html">Prices</a></li>
-                <li><a href="#">Insurance</a></li>
-                <li><a href="#">Sign in</a></li>
-                <li><a href="contact.html">Contact us</a></li>
-            </ul>
-        </nav>
-    </header>
+@if (session('success'))
+    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4">
+        {{ session('success') }}
+    </div>
+@endif
 
     <section id="prices_contact_main"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
         <div id="prices_contact_info">
@@ -103,6 +78,3 @@
             <a href="#"><img src="images/icons/youtube.svg" alt="youtube icon"></a>
         </div>
     </footer>
-</body>
-
-</html>

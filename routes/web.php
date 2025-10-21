@@ -31,7 +31,7 @@ Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPag
 Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('showMotorcycle');
 
 // お問い合わせページ
-Route::get('/motorcycles/contact-us', [ContactController::class, 'index'])->name('contactUs');
+Route::get('/contact-us', [ContactController::class, 'index'])->name('contactUs');
 
 // 認証
 Route::middleware('auth')->group(function() {

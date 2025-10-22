@@ -78,3 +78,4 @@
             <a href="#"><img src="images/icons/youtube.svg" alt="youtube icon"></a>
         </div>
     </footer>
+@endsection

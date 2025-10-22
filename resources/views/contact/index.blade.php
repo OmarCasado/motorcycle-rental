@@ -9,9 +9,9 @@
 @endif
 
     <section id="prices_contact_main" class=" pt-[80px] flex flex-col justify-center items-center text-center mb-[125px] bg-[url('/images/own/road3.png')] bg-center bg-cover"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
-        <div id="prices_contact_info">
+        <div id="prices_contact_info" class="mt-[200px]">
             <h2>GET IN TOUCH</h2>
-            <p>LET US HEAR FROM YOU</p>
+            <p class="mb-[50px]">LET US HEAR FROM YOU</p>
         </div>
     </section>
 

@@ -19,29 +19,30 @@
 
         <form action="#" method="post">
 
-            <div class="input_wrapper">
+            <div class="input_wrapper" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="name">Name:</label>
-                <input name="name" type="text" id="name" class="typed_input" placeholder="My name" required>
+                <input name="name" type="text" id="name" class="typed_input leading-[1.5rem]" placeholder="My name" required>
             </div>
 
-            <div class="input_wrapper">
+            <div class="input_wrapper" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="email">Email:</label>
-                <input name="email" type="text" id="email" class="typed_input" placeholder="email@email.com" required>
+                <input name="email" type="text" id="email" class="typed_input leading-[1.5rem]" placeholder="email@email.com" required>
             </div>
 
-            <div class="input_wrapper">
+            <div class="input_wrapper" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="age">Age:</label>
-                <input name="age" type="number" id="age" min="18" max="100" class="typed_input" placeholder="18"
+                <input name="age" type="number" id="age" min="18" max="100" class="typed_input leading-[1.5rem]" placeholder="18"
                     required>
             </div>
 
-            <div class="input_wrapper">
+            <div class="input_wrapper" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="message">Your message:</label>
                 <textarea name="" id="message" cols="30" rows="10"
-                    placeholder="Give us your opinion / Ask us your questions."></textarea>
+                    placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
             </div>
 
-            <input type="submit" value="Send" id="send_button">
+            <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-[var(--red)] text-[var(--white)] w-[100px] p-[10px] rounded-[10px]
+         hover:bg-[var(--green)] hover:shadow-[inset_3px_3px_5px_var(--dark-gray)] transition duration-200 ease-in">
         </form>
 
         <div id="contact_notes">

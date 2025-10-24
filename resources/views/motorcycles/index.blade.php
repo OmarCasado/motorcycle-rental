@@ -141,14 +141,4 @@
         <div id="about_card2" class="w-[60%] h-[550px] rounded-[10px] shadow-[5px_5px_6px_var(--light-gray)] border border-darkGray max-[900px]:w-[90%] max-[900px]:mb-[20px]"></div>
     </div>
 </section>
-<footer class="flex justify-between items-center bg-darkGray h-[70px]">
-    <div>
-        <small class="ml-5 text-white">© 2023 Japan On 2 Wheels @.C.H.</small>
-    </div>
-    <div id="goTop" class="w-[50px] h-[50px] leading-[50px] text-center bg-redCustom rounded-[30px] mr-[20px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
-        <a href="#">
-            <i class="fa-solid fa-angles-up fa-beat-fade fa-xl text-white"></i>
-        </a>
-    </div>
-</footer>
 @endsection

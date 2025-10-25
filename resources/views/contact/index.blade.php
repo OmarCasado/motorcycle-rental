@@ -8,7 +8,7 @@
     </div>
 @endif
 
-    <section id="prices_contact_main" class=" pt-[80px] flex flex-col justify-center items-center text-center mb-[125px] bg-[url('/images/own/road3.png')] bg-center bg-cover"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
+    <section id="prices_contact_main" class="z-10 pt-[80px] flex flex-col justify-center items-center text-center mb-[125px] bg-[url('/images/own/road3.png')] bg-center bg-cover"> <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
         <div id="prices_contact_info" class="mt-[200px]">
             <h2 class="m-0 text-[3rem] [text-shadow:2px_2px_2px_var(--dark-gray)]">GET IN TOUCH</h2>
             <p class="mb-[50px]">LET US HEAR FROM YOU</p>

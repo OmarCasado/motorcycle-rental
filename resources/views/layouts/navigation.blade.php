@@ -5,8 +5,8 @@
         <!--ロゴとブランド名を含む-->
         <div class="shrink-0 flex justify-center">
             <a href="{{ route('topPage') }}" class="flex px-[10px] w-[26rem] max-w-[100vw]">
-                <x-application-logo class="scale-105 max-w-full h-auto hover:scale-125 max-[960px]:scale-75 max-[900px]:filter-none max-[900px]:w-[25%] max-[900px]:h-auto max-[900px]:scale-[0.7]" />
-                <h1 class="text-white hover:text-greenCustom text-2xl leading-[70px] max-[900px]:text-gray-700 max-[900px]:text-[1.8rem]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
+                <x-application-logo class="scale-105 max-w-full h-auto hover:scale-125 max-[960px]:scale-75 max-[900px]:filter-none max-[900px]:w-[25%] max-[900px]:h-auto max-[900px]:scale-[0.7] transition duration-200 ease-in" />
+                <h1 class="text-white hover:text-greenCustom transition duration-200 text-2xl leading-[70px] max-[900px]:text-gray-700 max-[900px]:text-[1.8rem]">J.<span class="text-redCustom">O</span>.2 Bike Rental</h1>
             </a>
         </div>
 

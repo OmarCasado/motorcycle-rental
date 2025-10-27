@@ -45,7 +45,7 @@
          hover:bg-[var(--green)] hover:shadow-[inset_3px_3px_5px_var(--dark-gray)] transition duration-200 ease-in">
         </form>
 
-        <div id="contact_notes" class="w-[40%]">
+        <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">
 
             <h3>CONTACT DETAILS</h3>
             <h4>OSAKA MAIN SHOP:</h4>

@@ -15,9 +15,9 @@
         </div>
     </section>
 
-    <section id="contact_section" class="flex justify-between mb-[50px] max-[900px]:flex-col max-[900px]:items-center max-[900px]:justify-center ">
+    <section id="contact_section" class="flex justify-between mb-[50px] max-[900px]:flex-col max-[900px]:items-center max-[900px]:justify-center">
 
-        <form action="#" method="post" class="flex flex-col justify-center items-center border border-[var(--dark-gray)] w-[40%] mx-auto p-[10px] rounded-[25px] shadow-[5px_5px_6px_var(--light-gray)]">
+        <form action="#" method="post" class="flex flex-col justify-center items-center border border-[var(--dark-gray)] w-[40%] mx-auto p-[10px] rounded-[25px] shadow-[5px_5px_6px_var(--light-gray)] max-[900px]:w-[80%]">
 
             <div id="input_wrapper_1" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="name" class="mb-[10px]">Name:</label>

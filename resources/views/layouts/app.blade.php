@@ -17,7 +17,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-whiteCustom m-0 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
+    <body class="bg-whiteCustom m-0 @yield('body-bg')">
         <!-- Page Heading -->
         <header>
             @include('layouts.navigation')

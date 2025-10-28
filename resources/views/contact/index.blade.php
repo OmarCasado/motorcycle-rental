@@ -21,24 +21,23 @@
 
             <div id="input_wrapper_1" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="name" class="mb-[10px]">Name:</label>
-                <input name="name" type="text" id="name" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray" placeholder="My name" required>
+                <input name="name" type="text" id="name" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0" placeholder="My name" required>
             </div>
 
             <div id="input_wrapper_2" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="email" class="mb-[10px]">Email:</label>
-                <input name="email" type="text" id="email" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray" placeholder="email@email.com" required>
+                <input name="email" type="text" id="email" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0" placeholder="email@email.com" required>
             </div>
 
             <div id="input_wrapper_3" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="age" class="mb-[10px]">Age:</label>
-                <input name="age" type="number" id="age" min="18" max="100" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray" placeholder="18"
+                <input name="age" type="number" id="age" min="18" max="100" class="typed_input leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0" placeholder="18"
                     required>
             </div>
 
             <div id="input_wrapper_4" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="message" class="mb-[10px]">Your message:</label>
-                <textarea name="" id="message" cols="30" rows="10"
-                    placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
             </div>
 
             <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-[var(--red)] text-[var(--white)] w-[100px] p-[10px] rounded-[10px]

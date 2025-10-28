@@ -40,8 +40,7 @@
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
             </div>
 
-            <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-[var(--red)] text-[var(--white)] w-[100px] p-[10px] rounded-[10px]
-         hover:bg-[var(--green)] hover:shadow-[inset_3px_3px_5px_var(--dark-gray)] transition duration-200 ease-in">
+            <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-[var(--red)] text-[var(--white)] w-[100px] p-[10px] rounded-[10px] hover:bg-[var(--green)] hover:shadow-[inset_3px_3px_5px_var(--dark-gray)] transition duration-200 ease-in">
         </form>
 
         <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">

@@ -45,8 +45,7 @@
 
         <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">
 
-            <h3 class="mb-3 text-lg">CONTACT DETAILS</h3>
-            <h4>OSAKA MAIN SHOP:</h4>
+            <h3 class="mb-3 text-lg">OSAKA MAIN SHOP:</h3>
             <ul class="p-0">
                 <li class="mb-[10px]"><em>Direction:</em><span class="font-sans"> #-#-# Osaka City, Osaka Prefecture, Japan, ###-###</span></li>
                 <li class="mb-[10px]"><em>Tel:</em><span class="font-sans"> 1(012) ###-###</span></li>

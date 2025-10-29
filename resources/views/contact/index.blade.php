@@ -37,7 +37,7 @@
 
             <div id="input_wrapper_4" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="message" class="mb-[10px]">Your message:</label>
-                <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
+                <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none px-[10px]"></textarea>
             </div>
 
             <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-redCustom text-white w-[100px] p-[10px] rounded-[10px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">

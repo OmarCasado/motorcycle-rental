@@ -17,7 +17,7 @@
 
     <section id="contact_section" class="flex justify-between mb-[50px] max-[900px]:flex-col max-[900px]:items-center max-[900px]:justify-center">
 
-        <form action="#" method="post" class="flex flex-col justify-center items-center border border-darkGray w-[40%] mx-auto p-[10px] rounded-[25px] shadow-[5px_5px_6px_lightGray] max-[900px]:w-[80%] max-[900px]:mb-[50px]">
+        <form action="#" method="post" class="flex flex-col justify-center items-center border border-darkGray w-[40%] mx-auto p-[10px] rounded-[25px] shadow-[5px_5px_6px_rgb(124,130,138)] max-[900px]:w-[80%] max-[900px]:mb-[50px]">
 
             <div id="input_wrapper_1" class="flex flex-col justify-center items-left w-[90%]">
                 <label for="name" class="mb-[10px]">Name:</label>
@@ -40,7 +40,7 @@
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none"></textarea>
             </div>
 
-            <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-redCustom text-white w-[100px] p-[10px] rounded-[10px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_darkGray] transition duration-200 ease-in">
+            <input type="submit" value="Send" id="send_button" class="m-[10px] uppercase bg-redCustom text-white w-[100px] p-[10px] rounded-[10px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
         </form>
 
         <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">

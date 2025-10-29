@@ -13,7 +13,7 @@
 <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
 <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen">
     <div id="main_info" class="text-white max-[900px]:absolute max-[900px]:block max-[900px]:bg-lightTransparentWhite max-[900px]:m-5 max-[900px]:p-2.5 max-[900px]:rounded-[20px]">
-        <h2 class="m-0 text-5xl max-[900px]:text-darkGray max-[900px]:text-2xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
+        <h2 class="m-0 text-5xl [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-darkGray max-[900px]:text-2xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
         <p class="text-sm m-3 max-[1300px]:text-base max-[1100px]:text-xs max-[900px]:text-darkGray">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
         <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>
     </div>
@@ -40,7 +40,7 @@
 </aside>
 <!-- 新しいモデルを提示するセクション。各モデルは単独のarticleで構成する。-->
 <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
-    <h2 class="m-0 text-5xl pt-12 mb-12 max-[900px]:text-2xl"> RIDE OUR NEW MODELS</h2>
+    <h2 class="m-0 text-5xl pt-12 mb-12 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl"> RIDE OUR NEW MODELS</h2>
     {{-- Cards Grid --}}
     <div class="flex justify-center gap-10 max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
         @foreach($motorcycles as $moto)
@@ -123,7 +123,7 @@
 </section>
 <!--ブランドのヴァリューをまとめるセクション。-->
 <section id="about">
-    <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5 max-[900px]:text-2xl">ABOUT US</h2>
+    <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl">ABOUT US</h2>
     <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto max-[900px]:flex-col max-[900px]:h-auto">
         <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px] max-[900px]:w-[90%]">
             <h3>Japan On 2 Wheels</h3>

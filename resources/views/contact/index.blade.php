@@ -45,13 +45,13 @@
 
         <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">
 
-            <h3>CONTACT DETAILS</h3>
+            <h3 class="mb-3 text-lg">CONTACT DETAILS</h3>
             <h4>OSAKA MAIN SHOP:</h4>
             <ul class="p-0">
-                <li class="mb-[10px]"><em>Direction:</em> 1-#-# Osaka City, Osaka Prefecture, Japan, ###-###</li>
-                <li class="mb-[10px]"><em>Tel:</em> (012) ###-###</li>
-                <li class="mb-[10px]"><em>Email:</em> <a href="mailto:jo2@motoservices.com" class="text-greenCustom">〇〇2@〇〇〇〇.com</a> </li>
-                <li class="mb-[10px]"><em>Business Hours:</em> 8:00 to 20:00, 7 days a week</li>
+                <li class="mb-[10px]"><em>Direction:</em><span class="font-sans"> #-#-# Osaka City, Osaka Prefecture, Japan, ###-###</span></li>
+                <li class="mb-[10px]"><em>Tel:</em><span class="font-sans"> 1(012) ###-###</span></li>
+                <li class="mb-[10px]"><em>Email:</em><span class="font-sans"><a href="mailto:jo2@motoservices.com" class="text-greenCustom"> 〇〇2@〇〇〇〇.com</a></span></li>
+                <li class="mb-[10px]"><em>Business Hours:</em><span class="font-sans"> 8:00 to 20:00, 7 days a week</span></li>
             </ul>
 
             <div id="map_container" class="mb-[20px] w-[80%] h-[50%] border max-[900px]:w-[100%] max-[900px]:h-[60%]">

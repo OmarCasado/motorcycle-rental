@@ -8,21 +8,24 @@
     </div>
 @endif
 
-<div class="container pt-[80px] h-screen">
+<div class="container pt-[80px] h-screen flex justify-center">
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
-         alt="{{ $motorcycle->model }}"
-        class="w-[500px]">
+         alt="{{ $motorcycle->model }}">
 
-    <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
+    <div>
+        <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
-    <ul>
-        <li><strong>Year:</strong> {{ $motorcycle->year }}</li>
-        <li><strong>Color:</strong> {{ $motorcycle->color }}</li>
-        <li><strong>Price per Day (¥):</strong> {{ number_format($motorcycle->price_per_day) }}</li>
-        <li><strong>Available:</strong> {{ $motorcycle->is_available ? 'Yes' : 'No' }}</li>
-    </ul>
+        <ul>
+            <li><strong>Year:</strong> {{ $motorcycle->year }}</li>
+            <li><strong>Color:</strong> {{ $motorcycle->color }}</li>
+            <li><strong>Price per Day (¥):</strong> {{ number_format($motorcycle->price_per_day) }}</li>
+            <li><strong>Available:</strong> {{ $motorcycle->is_available ? 'Yes' : 'No' }}</li>
+        </ul>
 
-    <a href="{{ route('topPage') }}">← Back to list</a>
+        <a href="{{ route('topPage') }}">← Back to list</a>
+    </div>
+
+
 </div>
 @endsection

@@ -8,7 +8,7 @@
     </div>
 @endif
 
-<div class="container pt-[80px]">
+<div class="container pt-[80px] h-screen">
     <h1>{{ $motorcycle->brand }} {{ $motorcycle->model }}</h1>
 
     <ul>

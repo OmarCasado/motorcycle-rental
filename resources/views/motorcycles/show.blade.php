@@ -12,7 +12,7 @@
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
          alt="{{ $motorcycle->model }}"
-        class="w-[370px] hover:scale-125 transition">
+        class="w-[500px]">
 
     <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 

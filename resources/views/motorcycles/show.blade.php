@@ -9,6 +9,11 @@
 @endif
 
 <div class="container pt-[80px] h-screen">
+
+    <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
+         alt="{{ $motorcycle->model }}"
+        class="w-[370px] hover:scale-125 transition">
+
     <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
     <ul>
@@ -20,5 +25,4 @@
 
     <a href="{{ route('topPage') }}">← Back to list</a>
 </div>
-
 @endsection

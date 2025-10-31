@@ -13,8 +13,8 @@
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
          alt="{{ $motorcycle->model }}">
 
-    <div>
-        <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
+    <div class="flex flex-col justify-center">
+        <h1 class="text-2xl mb-2">{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
         <ul>
             <li><strong>Year:</strong> {{ $motorcycle->year }}</li>

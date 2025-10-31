@@ -9,7 +9,7 @@
 @endif
 
 <div class="container pt-[80px] h-screen">
-    <h1>{{ $motorcycle->brand }} {{ $motorcycle->model }}</h1>
+    <h1>{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
     <ul>
         <li><strong>Year:</strong> {{ $motorcycle->year }}</li>

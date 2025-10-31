@@ -8,7 +8,7 @@
     </div>
 @endif
 
-<div class="container pt-[80px] h-screen flex justify-center">
+<div class="container pt-[80px] h-screen flex justify-center max-[900px]:flex-col">
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
          alt="{{ $motorcycle->model }}">

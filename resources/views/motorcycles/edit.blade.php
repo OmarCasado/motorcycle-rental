@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container pt-[80px]">
-    <h1>Edit Motorcycle</h1>
+<div class="container pt-[80px] h-screen flex flex-col">
+    <h1 class="text-2xl mb-2">Edit Motorcycle</h1>
 
     @if ($errors->any())
         <div style="color: red;">

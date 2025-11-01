@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container pt-[80px] h-screen flex flex-col">
+<div class="pt-[80px] h-screen flex flex-col justify-center items-center">
     <h1 class="text-2xl mb-2">Edit Motorcycle</h1>
 
     @if ($errors->any())

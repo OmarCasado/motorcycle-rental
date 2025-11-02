@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('updateMotorcycle', $motorcycle->id) }}" method="post" enctype="multipart/form-data">
+    <form action="{{ route('updateMotorcycle', $motorcycle->id) }}" method="post" enctype="multipart/form-data" class="flex flex-col items-center">
         @csrf
 
     <table>

@@ -73,38 +73,19 @@
                     {{-- Buttons --}}
                     <div class="mt-4 flex gap-1" >
                         {{-- View --}}
-                        <a href="{{ route('showMotorcycle', $moto->id) }}"
-                        class="block no-underline text-whiteCustom bg-blue-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
-                                hover:bg-blue-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)]
-                                transition duration-200 ease-in text-center text-sm">
-                            View
-                        </a>
+                        <a href="{{ route('showMotorcycle', $moto->id) }}" class="btn btn-blue">View</a>
                         @auth
                             {{-- Rent --}}
                             <a href="{{ route('rentMotorcycle', $moto->id) }}"
-                            class="block no-underline text-whiteCustom bg-green-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
-                                    hover:bg-green-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
-                                    transition duration-200 ease-in text-center text-sm">
-                                Rent
-                            </a>
+                            class="btn btn-green">Rent</a>
                             {{-- Edit --}}
                             <a href="{{ route('editMotorcycle', $moto->id) }}"
-                            class="block no-underline text-whiteCustom bg-yellow-500 w-[80px] p-[8px] rounded-[8px] mx-auto 
-                                    hover:bg-yellow-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
-                                    transition duration-200 ease-in text-center text-sm">
-                                Edit
-                            </a>
+                            class="btn btn-yellow">Edit</a>
                             {{-- Delete --}}
                             <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST"
                                 onsubmit="return confirm('Are you sure?')" class="mx-auto">
                                 @csrf
-                                <button type="submit"
-                                        class="block w-[80px] p-[8px] rounded-[8px] mx-auto 
-                                            bg-red-500 text-whiteCustom 
-                                            hover:bg-red-600 hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] 
-                                            transition duration-200 ease-in text-center text-sm">
-                                    Delete
-                                </button>
+                                <button type="submit" class="btn btn-red">Delete</button>
                             </form>
                         @endauth
                     </div>

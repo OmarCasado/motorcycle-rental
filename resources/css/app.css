@@ -22,7 +22,7 @@
   }
 
   .btn-blue {
-    @apply bg-blue-600;
+    @apply bg-blue-500;
   }
 
   .btn-green {

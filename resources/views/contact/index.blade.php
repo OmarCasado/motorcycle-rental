@@ -40,7 +40,7 @@
                 <textarea name="" id="message" cols="30" rows="10" placeholder="Give us your opinion / Ask us your questions." class="resize-none px-[10px] mb-5"></textarea>
             </div>
 
-            <input type="submit" value="Send" id="send_button" class="btn">
+            <input type="submit" value="Send" id="send_button" class="btn btn-red">
         </form>
 
         <div id="contact_notes" class="w-[40%] max-[900px]:w-[80%]">

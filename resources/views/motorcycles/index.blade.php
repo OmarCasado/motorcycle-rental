@@ -15,7 +15,7 @@
     <div id="main_info" class="text-white max-[900px]:absolute max-[900px]:block max-[900px]:bg-lightTransparentWhite max-[900px]:m-5 max-[900px]:p-2.5 max-[900px]:rounded-[20px]">
         <h2 class="m-0 text-5xl [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-darkGray max-[900px]:text-2xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
         <p class="text-sm m-3 max-[1300px]:text-base max-[1100px]:text-xs max-[900px]:text-darkGray">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
-        <a href="#" class="block text-white bg-redCustom w-[100px] p-2 rounded-lg mx-auto my-0 hover:bg-greenCustom">RESERVE</a>
+        <a href="#" class="btn">Reserve</a>
     </div>
     <div id="background_video" class="fixed -z-10 w-full h-full max-[900px]:hidden">
         <video autoplay loop muted class="w-full">

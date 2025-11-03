@@ -60,7 +60,7 @@
         </tr>
     </table>
 
-        <button type="submit" class="mt-2 text-whiteCustom bg-greenCustom w-fit  p-[10px] rounded-[10px] hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">Update</button>
+        <button type="submit" class="mt-2 btn">Update</button>
     </form>
 </div>
 @endsection

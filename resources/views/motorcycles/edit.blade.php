@@ -60,7 +60,7 @@
         </tr>
     </table>
 
-        <button type="submit" class="mt-2 btn">Update</button>
+        <button type="submit" class="mt-2 btn btn-red">Update</button>
     </form>
 </div>
 @endsection

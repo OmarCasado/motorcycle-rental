@@ -7,7 +7,7 @@
     @if ($rentals->isEmpty())
         <p>You have no rentals yet.</p>
     @else
-        <table border="1" cellpadding="5" cellspacing="0">
+        <table cellpadding="5" cellspacing="0">
             <thead>
                 <tr>
                     <th>Motorcycle</th>

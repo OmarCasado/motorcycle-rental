@@ -27,7 +27,7 @@
                             @if($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="post">
                                     @csrf
-                                    <button type="submit">Cancel</button>
+                                    <button type="submit" class="btn btn-red">Cancel</button>
                                 </form>
                             @else
                                 <span>{{ ucfirst($rental->status) }}</span>

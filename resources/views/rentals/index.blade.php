@@ -19,10 +19,10 @@
             <tbody>
                 @foreach ($rentals as $rental)
                     <tr>
-                        <td class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm">{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
-                        <td class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm">{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
-                        <td class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
-                        <td class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm">{{ number_format($rental->total_price) }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ number_format($rental->total_price) }}</td>
                         <td>
                             @if($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="post">

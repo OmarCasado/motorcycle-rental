@@ -31,7 +31,7 @@
             <p>Price per day: ¥{{ number_format($motorcycle->price_per_day) }}</p>
         </div>
 
-        <button type="submit">Reserve</button>
+        <button type="submit" class="btn btn-red">Reserve</button>
     </form>
 </div>
 @endsection

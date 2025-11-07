@@ -17,19 +17,22 @@
     <form action="{{ route('reserveMotorcycle', $motorcycle->id) }}" method="POST">
         @csrf
 
-        <div>
-            <label>Start (date & time)</label>
-            <input type="datetime-local" name="start_datetime" value="{{ old('start_datetime') }}" required>
-        </div>
+    <table>
+      <tr>
+        <td>Start (date & time)</td>
+        <td><input type="datetime-local" name="start_datetime" value="{{ old('start_datetime') }}" required></td>
+      </tr>
 
-        <div>
-            <label>End (date & time)</label>
-            <input type="datetime-local" name="end_datetime" value="{{ old('end_datetime') }}" required>
-        </div>
+      <tr>
+        <td>End (date & time)</td>
+        <td><input type="datetime-local" name="end_datetime" value="{{ old('end_datetime') }}" required></td>
+      </tr>
 
-        <div>
-            <p>Price per day: ¥{{ number_format($motorcycle->price_per_day) }}</p>
-        </div>
+      <tr>
+        <td><p>Price per day:</p></td>
+        <td><p>Price per day: ¥{{ number_format($motorcycle->price_per_day) }}</p></td>
+      </tr>
+    </table>
 
         <button type="submit" class="btn btn-red">Reserve</button>
     </form>

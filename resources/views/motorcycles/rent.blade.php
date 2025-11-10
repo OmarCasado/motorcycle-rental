@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="pt-[80px] h-screen flex justify-center flex-col items-center">
-    <h1>Rent {{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
+    <h1 class="text-2xl mb-2">Rent {{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
     @if ($errors->any())
       <div style="color: red;">

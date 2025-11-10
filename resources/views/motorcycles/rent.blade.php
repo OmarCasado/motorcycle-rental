@@ -19,18 +19,18 @@
 
     <table>
       <tr>
-        <td>Start (date & time)</td>
+        <td>Start: </td>
         <td><input type="datetime-local" name="start_datetime" value="{{ old('start_datetime') }}" required></td>
       </tr>
 
       <tr>
-        <td>End (date & time)</td>
+        <td>End: </td>
         <td><input type="datetime-local" name="end_datetime" value="{{ old('end_datetime') }}" required></td>
       </tr>
 
       <tr>
-        <td><p>Price per day:</p></td>
-        <td><p>Price per day: ¥{{ number_format($motorcycle->price_per_day) }}</p></td>
+        <td><p>Price per day: </p></td>
+        <td><p>¥{{ number_format($motorcycle->price_per_day) }}</p></td>
       </tr>
     </table>
 

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container pt-[80px] h-screen">
+<div class="pt-[80px] h-screen">
     <h1>All Rentals (Admin Dashboard)</h1>
 
     @if ($rentals->isEmpty())

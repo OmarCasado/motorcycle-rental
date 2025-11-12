@@ -10,25 +10,25 @@
         <table>
             <thead>
                 <tr>
-                    <th>User</th>
-                    <th>Motorcycle</th>
-                    <th>Start</th>
-                    <th>End</th>
-                    <th>Total Price (¥)</th>
-                    <th>Status</th>
-                    <th>Action</th>
+                    <th class="border-2 border-darkGray text-left px-2">User</th>
+                    <th class="border-2 border-darkGray text-left px-2">Motorcycle</th>
+                    <th class="border-2 border-darkGray text-left px-2">Start</th>
+                    <th class="border-2 border-darkGray text-left px-2">End</th>
+                    <th class="border-2 border-darkGray text-left px-2">Total Price (¥)</th>
+                    <th class="border-2 border-darkGray text-left px-2">Status</th>
+                    <th class="border-2 border-darkGray text-left px-2">Action</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach ($rentals as $rental)
                     <tr>
-                        <td>{{ $rental->user->name }} ({{ $rental->user->email }})</td>
-                        <td>{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
-                        <td>{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
-                        <td>{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
-                        <td>{{ number_format($rental->total_price) }}</td>
-                        <td>{{ ucfirst($rental->status) }}</td>
-                        <td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->user->name }} ({{ $rental->user->email }})</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ number_format($rental->total_price) }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($rental->status) }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
                             @if ($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" style="display:inline;">
                                     @csrf

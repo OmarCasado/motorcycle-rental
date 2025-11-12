@@ -10,12 +10,12 @@
         <table>
             <thead>
                 <tr>
-                    <th class="border-2 border-darkGray text-left px-2">User</th>
-                    <th class="border-2 border-darkGray text-left px-2">Motorcycle</th>
-                    <th class="border-2 border-darkGray text-left px-2">Start</th>
-                    <th class="border-2 border-darkGray text-left px-2">End</th>
-                    <th class="border-2 border-darkGray text-left px-2">Total Price (¥)</th>
-                    <th class="border-2 border-darkGray text-left px-2">Status</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">User</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">Motorcycle</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">Start</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">End</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">Total Price (¥)</th>
+                    <th class="border-2 border-darkGray text-left px-2 max-[900px]:text-sm max-[900px]:px-1">Status</th>
                 </tr>
             </thead>
             <tbody>

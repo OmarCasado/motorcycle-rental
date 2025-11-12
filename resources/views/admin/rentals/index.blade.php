@@ -16,7 +16,6 @@
                     <th class="border-2 border-darkGray text-left px-2">End</th>
                     <th class="border-2 border-darkGray text-left px-2">Total Price (¥)</th>
                     <th class="border-2 border-darkGray text-left px-2">Status</th>
-                    <th class="border-2 border-darkGray text-left px-2">Action</th>
                 </tr>
             </thead>
             <tbody>

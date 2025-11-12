@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="pt-[80px] h-screen">
+<div class="pt-[80px] h-screen flex justify-center flex-col items-center max-[900px]:px-16">
     <h1 class="text-2xl mb-2">All Rentals (Admin Dashboard)</h1>
 
     @if ($rentals->isEmpty())

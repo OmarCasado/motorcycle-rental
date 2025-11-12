@@ -24,8 +24,8 @@
                     <tr>
                         <td>{{ $rental->user->name }} ({{ $rental->user->email }})</td>
                         <td>{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
-                        <td>{{ $rental->start_datetime->format('Y-m-d H:i') }}</td>
-                        <td>{{ $rental->end_datetime->format('Y-m-d H:i') }}</td>
+                        <td>{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
+                        <td>{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
                         <td>{{ number_format($rental->total_price) }}</td>
                         <td>{{ ucfirst($rental->status) }}</td>
                         <td>

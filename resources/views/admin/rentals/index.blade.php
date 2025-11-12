@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="pt-[80px] h-screen">
-    <h1>All Rentals (Admin Dashboard)</h1>
+    <h1 class="text-2xl mb-2">All Rentals (Admin Dashboard)</h1>
 
     @if ($rentals->isEmpty())
         <p>No rentals found.</p>

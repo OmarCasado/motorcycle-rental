@@ -31,7 +31,7 @@
                             @if ($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" style="display:inline;">
                                     @csrf
-                                    <button type="submit">Cancel</button>
+                                    <button type="submit" class="btn btn-red ms-2">Cancel</button>
                                 </form>
                             @else
                                 <span>-</span>

@@ -27,7 +27,7 @@
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ number_format($rental->total_price) }}</td>
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($rental->status) }}</td>
-                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
+                        <td>
                             @if ($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" style="display:inline;">
                                     @csrf

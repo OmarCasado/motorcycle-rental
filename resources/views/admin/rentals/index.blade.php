@@ -7,6 +7,9 @@
     @if ($rentals->isEmpty())
         <p>No rentals found.</p>
     @else
+        {{ --モバイル用のカード表示-- }}
+
+        {{ --デスクトップ用のテーブル表示-- }}
         <table>
             <thead>
                 <tr>

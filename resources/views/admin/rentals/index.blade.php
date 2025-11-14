@@ -8,6 +8,54 @@
         <p>No rentals found.</p>
     @else
         {{-- モバイル用のカード表示 --}}
+        <div class="w-full sm:hidden">
+            @foreach ($rentals as $rental)
+                <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4">
+                    <div class="font-bold text-lg mb-1">
+                        {{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}
+                    </div>
+
+                    <div class="text-sm text-darkGray/90">
+                        <div class="mb-1">
+                            <span class="font-semibold">User:</span>
+                            {{ $rental->user->name }} ({{ $rental->user->email }})
+                        </div>
+                        <div class="mb-1">
+                            <span class="font-semibold">Start:</span>
+                            {{ $rental->start_datetime->format('Y/m/d H:i') }}
+                        </div>
+                        <div class="mb-1">
+                            <span class="font-semibold">End:</span>
+                            {{ $rental->end_datetime->format('Y/m/d H:i') }}
+                        </div>
+                        <div class="mb-1">
+                            <span class="font-semibold">Total Price (¥):</span>
+                            {{ number_format($rental->total_price) }}
+                        </div>
+                        <div class="mb-2">
+                            <span class="font-semibold">Status:</span>
+                            <span class="inline-block rounded px-2 py-0.5 text-xs
+                                        {{ $rental->status === 'active'
+                                            ? 'bg-green-100 text-green-700'
+                                            : 'bg-gray-200 text-gray-700' }}">
+                                {{ ucfirst($rental->status) }}
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="mt-3">
+                        @if ($rental->status === 'active')
+                            <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" class="inline">
+                                @csrf
+                                <button type="submit" class="btn btn-red">Cancel</button>
+                            </form>
+                        @else
+                            <span class="text-sm text-darkGray/70">—</span>
+                        @endif
+                    </div>
+                </div>
+            @endforeach
+        </div>
 
         {{-- デスクトップ用のテーブル表示 --}}
         <div class="hidden sm:block overflow-x-auto">

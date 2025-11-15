@@ -18,19 +18,19 @@
                     <div class="text-sm text-darkGray/90">
                         <div class="mb-1">
                             <span class="font-semibold">User:</span>
-                            {{ $rental->user->name }} ({{ $rental->user->email }})
+                            <span class="font-sans">{{ $rental->user->name }} ({{ $rental->user->email }})</span>
                         </div>
                         <div class="mb-1">
                             <span class="font-semibold">Start:</span>
-                            {{ $rental->start_datetime->format('Y/m/d H:i') }}
+                            <span class="font-sans">{{ $rental->start_datetime->format('Y/m/d H:i') }}</span>
                         </div>
                         <div class="mb-1">
                             <span class="font-semibold">End:</span>
-                            {{ $rental->end_datetime->format('Y/m/d H:i') }}
+                            <span class="font-sans">{{ $rental->end_datetime->format('Y/m/d H:i') }}</span>
                         </div>
                         <div class="mb-1">
                             <span class="font-semibold">Total Price (¥):</span>
-                            {{ number_format($rental->total_price) }}
+                            <span class="font-sans">{{ number_format($rental->total_price) }}</span>
                         </div>
                         <div class="mb-2">
                             <span class="font-semibold">Status:</span>

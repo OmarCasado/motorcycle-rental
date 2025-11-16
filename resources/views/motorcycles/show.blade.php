@@ -10,8 +10,7 @@
 
 <div class="container pt-[80px] h-screen flex justify-center max-[900px]:flex-col">
 
-    <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}"
-         alt="{{ $motorcycle->model }}">
+    <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}" alt="{{ $motorcycle->model }}">
 
     <div class="flex flex-col justify-center">
         <h1 class="text-2xl mb-2">{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>

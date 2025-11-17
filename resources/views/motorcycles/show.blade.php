@@ -29,5 +29,9 @@
             @endauth
         </div>
     </div>
+
+    <div>
+        @include('layouts.calendar')
+    </div>
 </div>
 @endsection

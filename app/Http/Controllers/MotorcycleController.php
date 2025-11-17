@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Motorcycle;
 use App\Models\Brand;
+use App\Models\Rental;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
@@ -23,8 +25,23 @@ class MotorcycleController extends Controller
      */
     public function show($id)
     {
-        $motorcycle = Motorcycle::findOrFail($id);
-        return view('motorcycles.show', compact('motorcycle'));
+        $motorcycle = Motorcycle::with(['brand'])->findOrFail($id);
+
+        $activeRentals = Rental::query()
+            ->where('motorcycle_id', $motorcycle->id)
+            ->where('status', 'active')
+            ->get();
+
+        $disabledDateRanges = $activeRentals->map(function ($r) {
+            $start = Carbon::parse($r->start_datetime)->toDateString();
+            $end   = Carbon::parse($r->end_datetime)->subDay()->toDateString();
+            return ['from' => $start, 'to' => $end];
+        })->values();
+
+        return view('motorcycles.show', [
+            'motorcycle'         => $motorcycle,
+            'disabledDateRanges' => $disabledDateRanges,
+        ]);
     }
 
     /**

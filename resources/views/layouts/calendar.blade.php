@@ -5,3 +5,21 @@
 
     <input id="availabilityCalendar" type="text" class="w-full" readonly>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Rango de fechas ocupadas enviado desde el controlador
+    const disabledRanges = @json($disabledDateRanges);
+
+    flatpickr('#availabilityCalendar', {
+        inline: true,
+        dateFormat: 'Y-m-d',
+        showMonths: 1,
+        disable: disabledRanges,
+        locale: { firstDayOfWeek: 1 },
+        minDate: 'today',
+    });
+});
+</script>

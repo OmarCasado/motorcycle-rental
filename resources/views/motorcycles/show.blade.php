@@ -12,7 +12,7 @@
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}" alt="{{ $motorcycle->model }}">
 
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col justify-center mx-6">
         <h1 class="text-2xl mb-2">{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
         <ul>
@@ -30,7 +30,7 @@
         </div>
     </div>
 
-    <div>
+    <div class="flex flex-col justify-center">
         @include('layouts.calendar')
     </div>
 </div>

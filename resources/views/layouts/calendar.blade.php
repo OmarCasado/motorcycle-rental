@@ -3,7 +3,7 @@
 <div class="container mt-8 mb-16">
     <h2 class="text-xl font-semibold mb-3">Availability calendar</h2>
 
-    <input id="availabilityCalendar" type="text" class="w-full" readonly>
+    <input id="availabilityCalendar" type="text" class="hidden w-full" readonly>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

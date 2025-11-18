@@ -8,11 +8,11 @@
     </div>
 @endif
 
-<div class="pt-[80px] h-screen flex justify-center max-[900px]:flex-col">
+<div class="pt-[80px] min-[900px]:h-screen flex justify-center gap-5 max-[900px]:flex-col max-[900px]:items-center">
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}" alt="{{ $motorcycle->model }}">
 
-    <div class="flex flex-col justify-center mx-6">
+    <div class="flex flex-col justify-center">
         <h1 class="text-2xl mb-2">{{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
         <ul>

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
-<div class="container mt-8 mb-16">
+<div class="container mt-8 mb-16 flex flex-col max-[900px]:items-center">
     <h2 class="text-xl font-semibold mb-3">Availability calendar</h2>
 
     <input id="availabilityCalendar" type="text" class="hidden w-full" readonly>

@@ -8,7 +8,7 @@
     </div>
 @endif
 
-<div class="container pt-[80px] h-screen flex justify-center max-[900px]:flex-col">
+<div class="pt-[80px] h-screen flex justify-center max-[900px]:flex-col">
 
     <img src="{{ $motorcycle->image_path ? asset('storage/' . $motorcycle->image_path) : asset('images/default.jpg') }}" alt="{{ $motorcycle->model }}">
 
@@ -23,7 +23,7 @@
         </ul>
 
         <div class="flex gap-2">
-            <a href="{{ route('topPage') }}" class="mt-2 bg-redCustom text-white w-fit p-[10px] rounded-[10px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">← Back to list</a>
+            <a href="{{ route('topPage') }}" class="mt-2 bg-redCustom text-white w-fit p-[10px] rounded-[10px] hover:bg-greenCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">← Back</a>
             @auth
                 <a href="{{ route('rentMotorcycle', $motorcycle->id) }}" class="mt-2 text-whiteCustom bg-greenCustom w-fit  p-[10px] rounded-[10px] hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">Rent</a>
             @endauth

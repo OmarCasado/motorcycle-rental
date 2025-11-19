@@ -51,7 +51,7 @@ Route::middleware('auth')->group(function() {
     // バイクを保存
     Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
 
-        // レンタルフォーム
+    // レンタルフォーム
     Route::get('/motorcycles/{id}/rent', [RentalController::class, 'rent'])->name('rentMotorcycle');
 
     // バイクをレンタル

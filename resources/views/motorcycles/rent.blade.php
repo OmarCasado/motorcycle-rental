@@ -16,7 +16,6 @@
 
     <form action="{{ route('reserveMotorcycle', $motorcycle->id) }}" method="POST">
         @csrf
-
     <table>
       <tr>
         <td>Start: </td>

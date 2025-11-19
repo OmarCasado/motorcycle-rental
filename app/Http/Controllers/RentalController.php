@@ -29,7 +29,22 @@ class RentalController extends Controller
     public function rent($id)
     {
         $motorcycle = Motorcycle::findOrFail($id);
-        return view('motorcycles.rent', compact('motorcycle'));
+
+        $activeRentals = Rental::query()
+            ->where('motorcycle_id', $motorcycle->id)
+            ->where('status', 'active')
+            ->get();
+
+        $disabledDateRanges = $activeRentals->map(function($r) {
+            $start = Carbon::parse($r->start_datetime)->toDateString();
+            $end   = Carbon::parse($r->end_datetime)->subDay()->toDateString();
+            return ['from' => $start, 'to' => $end];
+        })->values();
+
+        return view('motorcycles.rent', [
+            'motorcycle'         => $motorcycle,
+            'disabledDateRanges' => $disabledDateRanges,
+        ]);
     }
 
     /**

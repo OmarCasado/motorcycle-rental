@@ -35,5 +35,9 @@
 
         <button type="submit" class="btn btn-red">Reserve</button>
     </form>
+
+    <div>
+        @include('layouts.calendar')
+    </div>
 </div>
 @endsection

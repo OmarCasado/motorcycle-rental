@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="pt-[80px] h-screen flex justify-center flex-col items-center">
+<div class="pt-[80px] min-[900px]:h-screen flex justify-center items-center gap-10 max-[900px]:flex-col">
+
+  <div class="flex flex-col max-[900px]:items-center">
     <h1 class="text-2xl mb-2">Rent {{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
 
     @if ($errors->any())
@@ -35,6 +37,8 @@
 
         <button type="submit" class="btn btn-red">Reserve</button>
     </form>
+
+  </div>
 
     <div>
         @include('layouts.calendar')

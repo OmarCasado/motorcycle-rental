@@ -57,7 +57,9 @@ Route::middleware('auth')->group(function() {
     // レンタルをキャンセル
     Route::post('/my-rentals/{id}/cancel', [RentalController::class, 'cancel'])->name('cancelMyRental');
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    // マイプロフィールページ
+    Route::get('/profile', [ProfileController::class, 'index'])->name('showMyProfile');
+
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 

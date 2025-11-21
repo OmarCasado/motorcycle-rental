@@ -13,7 +13,7 @@
 
     <div class="grid gap-6 md:grid-cols-2">
 
-        {{-- Card: Account information --}}
+        {{-- アカウント情報カ－ド --}}
         <div class="rounded-[10px] border border-gray-200 bg-white/80 p-5 shadow-sm">
             <h2 class="mb-4 text-xl font-semibold">Account information</h2>
 
@@ -45,7 +45,6 @@
                 </div>
             </dl>
 
-            {{-- Botón de edición para el futuro (aún sin implementar) --}}
             {{-- 
             <a href="{{ route('profile.index') }}"
                class="mt-5 inline-block rounded-[10px] bg-greenCustom px-4 py-2 text-sm font-medium text-whiteCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
@@ -54,7 +53,7 @@
             --}}
         </div>
 
-        {{-- Card: Rental summary --}}
+        {{-- レンタル情報カ－ド --}}
         <div class="rounded-[10px] border border-gray-200 bg-white/80 p-5 shadow-sm">
             <h2 class="mb-4 text-xl font-semibold">Rental summary</h2>
 

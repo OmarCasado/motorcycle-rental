@@ -64,7 +64,7 @@
 
                 <li class="flex justify-between">
                     <span class="font-semibold">Active rentals</span>
-                    <span class="font-sans">activeRentals</span>
+                    <span class="font-sans">{{ $activeRentals }}</span>
                 </li>
 
                 <li class="flex justify-between">

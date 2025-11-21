@@ -17,8 +17,13 @@ class ProfileController extends Controller
      */
     public function index(Request $request): View
     {
+        $user = $request->user();
+
+        $totalRentals = Rental::where('user_id', $user->id)->count();
+
         return view('profile.index', [
-            'user' => $request->user(),
+            'user' => $user,
+            'totalRentals' => $totalRentals,
         ]);
     }
 }

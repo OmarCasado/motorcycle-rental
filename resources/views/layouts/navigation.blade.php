@@ -28,7 +28,7 @@
                 @endif
             @endauth
 
-            <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
+            <x-nav-link :href="route('profile.index')" :active="request()->routeIs('profile.index')">
                 My Profile
             </x-nav-link>
 
@@ -87,7 +87,7 @@
                     @endif
                 @endauth
 
-                <x-responsive-nav-link :href="route('profile.edit')">
+                <x-responsive-nav-link :href="route('profile.index')">
                     My Profile
                 </x-responsive-nav-link>
 

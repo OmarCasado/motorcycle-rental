@@ -9,7 +9,7 @@
         </div>
     @endif
 
-    <h1 class="mb-6 text-3xl font-semibold">My Profile</h1>
+    <h1 class="text-2xl mb-2">My Profile</h1>
 
     <div class="grid gap-6 md:grid-cols-2">
 
@@ -45,7 +45,7 @@
                 </div>
             </dl>
 
-            {{-- 
+            {{--
             <a href="{{ route('profile.index') }}"
                class="mt-5 inline-block rounded-[10px] bg-greenCustom px-4 py-2 text-sm font-medium text-whiteCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
                 Edit profile

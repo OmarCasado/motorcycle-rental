@@ -59,7 +59,7 @@
             <ul class="space-y-3 text-sm">
                 <li class="flex justify-between">
                     <span class="font-semibold">Total rentals</span>
-                    <span class="font-sans">totalRentals</span>
+                    <span class="font-sans">{{ $totalRentals }}</span>
                 </li>
 
                 <li class="flex justify-between">

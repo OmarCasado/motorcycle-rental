@@ -33,7 +33,7 @@ class ProfileController extends Controller
             'user' => $user,
             'totalRentals'  => $totalRentals,
             'activeRentals' => $activeRentals,
-            'totalSpent'    => $totalSpent,
+            'totalSpent'    => number_format($totalSpent),
         ]);
     }
 }

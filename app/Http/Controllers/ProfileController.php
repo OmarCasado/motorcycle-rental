@@ -36,4 +36,13 @@ class ProfileController extends Controller
             'totalSpent'    => number_format($totalSpent),
         ]);
     }
+
+    /**
+     * ユ－ザ－情報編集ページを表示
+     */
+    public function edit($id) {
+        $user = User::findOrFail($id);
+
+        return view('profile.edit');
+    }
 }

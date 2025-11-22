@@ -46,7 +46,7 @@
             </dl>
 
 
-            <a href="{{ route('editMyProfile') }}"
+            <a href="{{ route('editMyProfile', $user->id) }}"
                class="mt-5 inline-block rounded-[10px] bg-greenCustom px-4 py-2 text-sm font-medium text-whiteCustom hover:shadow-[inset_3px_3px_5px_rgb(56,58,59)] transition duration-200 ease-in">
                 Edit profile
             </a>

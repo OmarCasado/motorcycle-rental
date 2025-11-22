@@ -70,7 +70,7 @@
                 <li class="flex justify-between">
                     <span class="font-semibold">Total spent (¥)</span>
                     <span class="font-sans">
-                        totalSpent
+                        {{ $totalSpent }}
                     </span>
                 </li>
             </ul>

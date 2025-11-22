@@ -24,10 +24,16 @@ class ProfileController extends Controller
         $activeRentals = Rental::where('user_id', $user->id)
         ->where('status', 'active')->count();
 
+        $totalSpent = Rental::where('user_id', $user->id)
+            ->where('status', 'active')
+            ->orWhere('status', 'completed')
+            ->sum('total_price');
+
         return view('profile.index', [
             'user' => $user,
             'totalRentals'  => $totalRentals,
             'activeRentals' => $activeRentals,
+            'totalSpent'    => $totalSpent,
         ]);
     }
 }

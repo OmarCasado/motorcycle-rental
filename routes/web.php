@@ -66,8 +66,6 @@ Route::middleware('auth')->group(function() {
     // マイプロフィール情報を編集
     Route::put('/profile', [ProfileController::class, 'update'])->name('updateMyProfile');
 
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面
         Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');

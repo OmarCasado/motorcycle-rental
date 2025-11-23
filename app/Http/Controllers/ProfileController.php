@@ -64,7 +64,8 @@ class ProfileController extends Controller
         $user->email = $validated['email'];
         $user->save();
 
-
+        return redirect()
+            ->route('showMyProfile')
+            ->with('status', 'Profile updated successfully.');
+        }
     }
-
-}

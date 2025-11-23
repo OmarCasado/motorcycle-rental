@@ -46,4 +46,12 @@ class ProfileController extends Controller
 
         return view('profile.edit');
     }
+
+    /**
+    * ユ－ザ－情報を編集
+    */
+    public function update(Request $request, $id) {
+
+    }
+
 }

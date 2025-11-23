@@ -19,13 +19,13 @@
 
         {{-- Name --}}
         <div>
-            <label for="name" class="block text-sm font-semibold mb-1"> Name </label>
+            <label for="name" class="block text-sm font-semibold mb-1"> Name: </label>
             <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" class="leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0 font-sans" required>
         </div>
 
         {{-- Email --}}
         <div>
-            <label for="email" class="block text-sm font-semibold mb-1">Email</label>
+            <label for="email" class="block text-sm font-semibold mb-1">Email:</label>
 
             <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0 font-sans" required>
         </div>

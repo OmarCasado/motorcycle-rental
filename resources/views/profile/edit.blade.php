@@ -16,8 +16,7 @@
 
     <form action="" method="post" class="flex flex-col items-center">
         @csrf
-
-
+        <h1>{{ $user }}</h1>
         <button type="submit" class="mt-2 btn btn-red">Update</button>
     </form>
 </div>

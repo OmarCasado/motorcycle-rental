@@ -20,14 +20,14 @@
         {{-- Name --}}
         <div>
             <label for="name" class="block text-sm font-semibold mb-1"> Name </label>
-            <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" class="w-full rounded-[8px] border border-gray-300 px-3 py-2 font-sans focus:border-greenCustom focus:outline-none focus:ring-1 focus:ring-greenCustom" required>
+            <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" class="leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0 font-sans" required>
         </div>
 
         {{-- Email --}}
         <div>
             <label for="email" class="block text-sm font-semibold mb-1">Email</label>
 
-            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="w-full rounded-[8px] border border-gray-300 px-3 py-2 font-sans focus:border-greenCustom focus:outline-none focus:ring-1 focus:ring-greenCustom" required>
+            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0 font-sans" required>
         </div>
 
         {{-- Buttons --}}

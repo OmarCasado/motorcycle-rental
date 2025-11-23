@@ -5,10 +5,10 @@
     <h1 class="text-2xl mb-2">Edit Profile</h1>
 
     @if ($errors->any())
-        <div style="color: red;">
-            <ul>
+        <div class="mb-4 rounded-[10px] border border-red-400 bg-red-100 px-4 py-3 text-red-700">
+            <ul class="list-disc pl-5 text-sm">
                 @foreach ($errors->all() as $error)
-                    <li>• {{ $error }}</li>
+                    <li class="font-sans">• {{ $error }}</li>
                 @endforeach
             </ul>
         </div>

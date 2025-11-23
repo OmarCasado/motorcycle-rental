@@ -63,7 +63,9 @@ Route::middleware('auth')->group(function() {
     // マイプロフィールページを編集
     Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('editMyProfile');
 
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    // マイプロフィール情報を編集
+    Route::put('/profile', [ProfileController::class, 'update'])->name('updateMyProfile');
+
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::middleware('admin')->group(function(){

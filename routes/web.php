@@ -58,10 +58,10 @@ Route::middleware('auth')->group(function() {
     Route::post('/my-rentals/{id}/cancel', [RentalController::class, 'cancel'])->name('cancelMyRental');
 
     // マイプロフィールページ
-    Route::get('/profile', [ProfileController::class, 'index'])->name('showMyProfile');
+    Route::get('/my-profile', [ProfileController::class, 'index'])->name('showMyProfile');
 
     // マイプロフィールページを編集
-    Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('editMyProfile');
+    Route::get('/my-profile/{id}/edit', [ProfileController::class, 'edit'])->name('editMyProfile');
 
     // マイプロフィール情報を編集
     Route::post('/my-profile/update', [ProfileController::class, 'update'])->name('updateMyProfile');

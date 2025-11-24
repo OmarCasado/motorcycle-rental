@@ -14,7 +14,7 @@
         </div>
     @endif
 
-    <form action="{{ route('updateMyProfile', $user->id) }}" method="post" class="flex flex-col items-center">
+    <form action="{{ route('updateMyProfile') }}" method="POST" class="flex flex-col items-center">
         @csrf
 
         {{-- Name --}}

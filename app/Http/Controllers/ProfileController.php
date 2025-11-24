@@ -52,8 +52,8 @@ class ProfileController extends Controller
     /**
     * ユ－ザ－情報を編集
     */
-    public function update(Request $request, $id) {
-        $user = User::findOrFail($id);
+    public function update(Request $request) {
+        $user = Auth::user();
 
         $validated = $request->validate([
         'name'  => ['required', 'string', 'max:255'],

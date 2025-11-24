@@ -37,6 +37,5 @@
             <a href="{{ route('showMyProfile') }}" class="text-sm text-gray-600 hover:underline">Cancel</a>
         </div>
     </form>
-    </form>
 </div>
 @endsection

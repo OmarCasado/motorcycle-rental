@@ -41,8 +41,8 @@ class ProfileController extends Controller
     /**
      * ユ－ザ－情報編集ページを表示
      */
-    public function edit($id) {
-        $user = User::findOrFail($id);
+    public function edit() {
+        $user = Auth::user();
 
         return view('profile.edit', [
             'user' => $user,

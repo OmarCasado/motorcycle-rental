@@ -64,7 +64,7 @@ Route::middleware('auth')->group(function() {
     Route::get('/profile/{id}/edit', [ProfileController::class, 'edit'])->name('editMyProfile');
 
     // マイプロフィール情報を編集
-    Route::post('/profile/update/{id}', [ProfileController::class, 'update'])->name('updateMyProfile');
+    Route::post('/my-profile/update', [ProfileController::class, 'update'])->name('updateMyProfile');
 
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面

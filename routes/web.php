@@ -8,6 +8,8 @@ use App\Http\Controllers\AdminRentalController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\ContactController;
 
+require __DIR__.'/auth.php';
+
 Route::get('/', function () {
     return redirect()->route('topPage');
 });
@@ -15,8 +17,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-require __DIR__.'/auth.php';
 
 // トップページ
 Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');

@@ -38,6 +38,7 @@ class RentalController extends Controller
         $disabledDateRanges = $activeRentals->map(function($r) {
             $start = Carbon::parse($r->start_datetime)->toDateString();
             $end   = Carbon::parse($r->end_datetime)->subDay()->toDateString();
+
             return ['from' => $start, 'to' => $end];
         })->values();
 

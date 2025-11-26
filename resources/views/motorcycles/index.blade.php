@@ -12,7 +12,7 @@
 <!--タイトル、パラグラフと背景動画を含むMain セクション。-->
 <section id="main" class="h-screen flex justify-center items-center text-center max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:h-screen">
     <div id="main_info" class="text-white max-[900px]:absolute max-[900px]:block max-[900px]:bg-lightTransparentWhite max-[900px]:m-5 max-[900px]:p-2.5 max-[900px]:rounded-[20px]">
-        <h2 class="m-0 text-5xl [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-darkGray max-[900px]:text-2xl">IF THE ROAD IS YOUR GOAL</h2 class="m-0 text-5xl">
+        <h2 class="m-0 text-5xl [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-darkGray max-[900px]:text-2xl">IF THE ROAD IS YOUR GOAL</h2>
         <p class="text-sm m-3 max-[1300px]:text-base max-[1100px]:text-xs max-[900px]:text-darkGray">RENT A MOTORCYCLE WITH US AND UNLOCK ALL THE HIDDEN BEAUTY OF JAPAN</p>
         <a href="#new_models_title" class="btn btn-red">Reserve</a>
     </div>

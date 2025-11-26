@@ -14,10 +14,6 @@ Route::get('/', function () {
     return redirect()->route('topPage');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
-
 // トップページ
 Route::get('/motorcycles', [MotorcycleController::class, 'index'])->name('topPage');
 

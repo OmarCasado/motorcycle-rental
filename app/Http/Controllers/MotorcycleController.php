@@ -88,6 +88,7 @@ class MotorcycleController extends Controller
     {
         $motorcycle = Motorcycle::findOrFail($id);
         $brands = Brand::all();
+
         return view('motorcycles.edit', compact('motorcycle', 'brands'));
     }
 

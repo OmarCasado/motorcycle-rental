@@ -58,7 +58,7 @@
         </tr>
     </table>
 
-    <button type="submit">Save</button>
+    <button type="submit" class="btn btn-red">Save</button>
     </form>
 </div>
 @endsection

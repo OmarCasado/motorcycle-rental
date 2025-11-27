@@ -16,49 +16,49 @@
 
     <form action="{{ route('storeMotorcycle') }}" method="post" enctype="multipart/form-data">
         @csrf
-        <div>
-            <label>Brand:</label>
-            <select name="brand_id" required>
-                <option value="">Select Brand</option>
+
+    <table>
+        <tr>
+            <td>Brand:</td>
+            <td> <select name="brand_id" class="px-3 leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required>
                 @foreach($brands as $brand)
                     <option value="{{ $brand->id }}">{{ $brand->name }}</option>
                 @endforeach
-            </select>
-        </div>
+            </select></td>
+        </tr>
 
-        <div>
-            <label>Model:</label>
-            <input type="text" name="model" required>
-        </div>
+        <tr>
+            <td>Model:</td>
+            <td><input type="text" name="model" class="typed_input leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required></td>
+        </tr>
 
-        <div>
-            <label>Year:</label>
-            <input type="number" name="year" min="2000" max="{{ date('Y') }}" required>
-        </div>
+        <tr>
+            <td>Year:</td>
+            <td><input type="number" name="year" min="2000" max="{{ date('Y') }}" class="typed_input leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required></td>
+        </tr>
 
-        <div>
-            <label>Color:</label>
-            <input type="text" name="color" required>
-        </div>
+        <tr>
+            <td>Color:</td>
+            <td><input type="text" name="color" class="typed_input leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required></td>
+        </tr>
 
-        <div>
-            <label>Price per Day (¥):</label>
-            <input type="number" name="price_per_day" min="0" required>
-        </div>
+        <tr>
+            <td>Price per Day (¥):</td>
+            <td><input type="number" name="price_per_day" min="0" class="typed_input leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required></td>
+        </tr>
 
-        <div>
-            <label for="image">Motorcycle Image:</label>
-            <input type="file" name="image" id="image">
-        </div>
+        <tr>
+            <td>Image:</td>
+            <td><input type="file" name="image" id="image"></td>
+        </tr>
 
-        <div>
-            <label>
-                <input type="checkbox" name="is_available" checked>
-                Available
-            </label>
-        </div>
+        <tr>
+            <td>Available:</td>
+            <td><input type="checkbox" name="is_available"></td>
+        </tr>
+    </table>
 
-        <button type="submit">Save</button>
+    <button type="submit">Save</button>
     </form>
 </div>
 @endsection

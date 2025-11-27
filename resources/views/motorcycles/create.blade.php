@@ -17,8 +17,9 @@
     <form action="{{ route('storeMotorcycle') }}" method="post" enctype="multipart/form-data">
         @csrf
 
-    <table>
-        <tr>
+    <div class="max-[900px]:pl-[100px]">
+        <table>
+            <tr>
             <td>Brand:</td>
             <td> <select name="brand_id" class="px-3 leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required>
                 @foreach($brands as $brand)
@@ -56,7 +57,9 @@
             <td>Available:</td>
             <td><input type="checkbox" name="is_available"></td>
         </tr>
-    </table>
+        </table>
+    </div>
+
 
     <button type="submit" class="btn btn-red">Save</button>
     </form>

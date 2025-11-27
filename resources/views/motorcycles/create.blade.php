@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="pt-[80px] h-screen flex flex-col justify-center items-center">
-    <h1>Add New Motorcycle</h1>
+    <h1 class="text-2xl mb-2">Add New Motorcycle</h1>
 
     @if ($errors->any())
         <div style="color: red;">

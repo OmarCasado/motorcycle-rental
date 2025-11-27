@@ -48,7 +48,7 @@
         </tr>
 
         <tr>
-            <td>Image:</td>
+            <td>Motorcycle Image:</td>
             <td><input type="file" name="image" id="image"></td>
         </tr>
 

@@ -131,14 +131,4 @@ class RentalController extends Controller
 
         return redirect()->back()->with('success', 'Reservation cancelled successfully.');
     }
-
-    /**
-     * バイクのレンタルをコンプリート
-     */
-    public function completeRental()
-    {
-        Rental::where('status', 'active')
-            ->where('end_datetime', '<', Carbon::now())
-            ->update(['status' => 'completed']);
-    }
 }

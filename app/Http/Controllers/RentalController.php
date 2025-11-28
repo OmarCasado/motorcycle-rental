@@ -131,4 +131,11 @@ class RentalController extends Controller
 
         return redirect()->back()->with('success', 'Reservation cancelled successfully.');
     }
+
+    /**
+     * バイクのレンタルをコンプリート
+     */
+    public function complete($id) {
+
+    }
 }

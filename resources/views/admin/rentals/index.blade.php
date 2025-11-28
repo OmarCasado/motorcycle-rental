@@ -86,7 +86,7 @@
                                         <button type="submit" class="btn btn-red ms-2">Cancel</button>
                                     </form>
                                 @else
-                                    <span>-</span>
+                                    <span></span>
                                 @endif
                             </td>
                         </tr>

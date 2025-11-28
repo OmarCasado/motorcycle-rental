@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Rental;
 use Illuminate\Http\Request;
+use Carbon\Carbon;
 
 class AdminRentalController extends Controller
 {

@@ -10,7 +10,7 @@
         {{-- モバイル用のカード表示 --}}
         <div class="w-full sm:hidden">
             @foreach ($rentals as $rental)
-                <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4">
+                <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4 max-[900px]:mb-5">
                     <div class="font-bold text-lg mb-1">
                         {{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}
                     </div>

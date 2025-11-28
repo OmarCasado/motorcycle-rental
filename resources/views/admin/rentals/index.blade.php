@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="pt-[80px] h-screen flex justify-center flex-col items-center max-[900px]:px-16 overflow-x-auto">
-    <h1 class="text-2xl mb-2">All Rentals (Admin Dashboard)</h1>
+    <h1 class="text-2xl mb-2">All Rentals</h1>
 
     @if ($rentals->isEmpty())
         <p>No rentals found.</p>

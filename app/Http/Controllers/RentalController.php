@@ -135,7 +135,9 @@ class RentalController extends Controller
     /**
      * バイクのレンタルをコンプリート
      */
-    public function complete($id) {
-
+    public function completeRental() {
+        Rental::where('status', 'active')
+            ->where('end_datetime', '<', Carbon::now())
+            ->update(['status' => 'completed']);
     }
 }

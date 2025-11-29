@@ -20,7 +20,9 @@ class ProfileController extends Controller
     {
         $user = $request->user();
 
-        $totalRentals = Rental::where('user_id', $user->id)->count();
+        $totalRentals = Rental::where('user_id', $user->id)
+            ->whereNot('status', 'canceled')
+            ->count();
 
         $activeRentals = Rental::where('user_id', $user->id)
         ->where('status', 'active')->count();

@@ -126,9 +126,9 @@ class RentalController extends Controller
             abort(403, 'Unauthorized');
         }
 
-        $rental->status = 'cancelled';
+        $rental->status = 'canceled';
         $rental->save();
 
-        return redirect()->back()->with('success', 'Reservation cancelled successfully.');
+        return redirect()->back()->with('success', 'Reservation canceled successfully.');
     }
 }

@@ -66,7 +66,7 @@ Route::middleware('auth')->group(function() {
         // 管理者レンタル画面
         Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
 
-        // ユ－ザ－を表示
+        // ユ－ザ管理
         Route::get('/admin/users', [AdminUserController::class, 'index'])->name('showUsers');
 
         // ユ－ザ－権限を変更

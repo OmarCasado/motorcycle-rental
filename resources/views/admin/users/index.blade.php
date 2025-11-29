@@ -4,8 +4,10 @@
 <div class="container">
     <h1>User Management</h1>
 
-    @if(session('success'))
-        <p style="color: green;">{{ session('success') }}</p>
+    @if (session('success'))
+        <div class="text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">
+            {{ session('success') }}
+        </div>
     @endif
 
     <table border="1" cellpadding="5" cellspacing="0">

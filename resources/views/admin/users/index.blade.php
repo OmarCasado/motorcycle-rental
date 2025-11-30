@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="">
+<div class="pt-[80px] h-screen flex flex-col justify-center items-center">
     <h1>User Management</h1>
 
     @if (session('success'))

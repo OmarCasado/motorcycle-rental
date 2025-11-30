@@ -13,10 +13,10 @@
     <table>
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Current Role</th>
-                <th>Change Role</th>
+                <th class="border-2 border-darkGray text-left px-2">Name</th>
+                <th class="border-2 border-darkGray text-left px-2">Email</th>
+                <th class="border-2 border-darkGray text-left px-2">Current Role</th>
+                <th class="border-2 border-darkGray text-left px-2">Change Role</th>
             </tr>
         </thead>
         <tbody>

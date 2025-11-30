@@ -22,10 +22,10 @@
         <tbody>
             @foreach ($users as $user)
                 <tr>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                    <td>{{ ucfirst($user->role) }}</td>
-                    <td>
+                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->name }}</td>
+                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->email }}</td>
+                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($user->role) }}</td>
+                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
                         <form action="{{ route('updateUserRole', $user->id) }}" method="post">
                             @csrf
                             <select name="role">

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="pt-[80px] h-screen flex flex-col justify-center items-center">
-    <h1>User Management</h1>
+    <h1 class="text-2xl mb-2">User Management</h1>
 
     @if (session('success'))
         <div class="text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">

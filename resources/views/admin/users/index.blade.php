@@ -32,7 +32,7 @@
                                 <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
                                 <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
                             </select>
-                            <button type="submit" class="btn btn-red">Update</button>
+                            <button type="submit" class="btn btn-red ms-2">Update</button>
                         </form>
                     </td>
                 </tr>

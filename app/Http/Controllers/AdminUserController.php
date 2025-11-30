@@ -14,7 +14,7 @@ class AdminUserController extends Controller
     {
         $users = User::orderBy('created_at', 'desc')->get();
 
-        return view('admin.users.index', compact('users'));
+        return view('showUsers', compact('users'));
     }
 
     /**
@@ -30,7 +30,7 @@ class AdminUserController extends Controller
         $user->role = $request->input('role');
         $user->save();
 
-        return redirect()->route('admin.users.index')
+        return redirect()->route('showUsers')
             ->with('success', "Role updated for {$user->name}");
     }
 }

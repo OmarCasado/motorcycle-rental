@@ -10,7 +10,7 @@
         </div>
     @endif
 
-    <table border="1" cellpadding="5" cellspacing="0">
+    <table>
         <thead>
             <tr>
                 <th>Name</th>

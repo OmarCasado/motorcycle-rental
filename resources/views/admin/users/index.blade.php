@@ -12,6 +12,40 @@
 
     {{-- モバイル用のカード表示 --}}
     <div class="w-full sm:hidden">
+        @foreach ($users as $user)
+            <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4 max-[900px]:mb-5">
+                <div class="font-bold text-lg mb-1">
+                    {{ $user->name }}
+                </div>
+
+                <div class="text-sm text-darkGray/90">
+                    <div class="mb-1">
+                        <span class="font-semibold">Email:</span>
+                        <span class="font-sans">{{ $user->email }}</span>
+                    </div>
+                    <div class="mb-1">
+                        <span class="font-semibold">Current Role:</span>
+                        <span class="font-sans">{{ ucfirst($user->role) }}</span>
+                    </div>
+                    <div class="mb-1">
+                        <span class="font-semibold">Change Role:</span>
+                        <span class="font-sans">
+                            <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
+                                <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
+                                <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+                            </select>
+                        </span>
+                    </div>
+                </div>
+
+                <div>
+                    <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
+                        @csrf
+                        <button type="submit" class="btn btn-red ms-2">Update</button>
+                    </form>
+                </div>
+            </div>
+        @endforeach
     </div>
 
     {{-- デスクトップ用のテーブル表示 --}}

@@ -32,7 +32,7 @@
                         </select>
                     </td>
 
-                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
+                    <td>
                         <form action="{{ route('updateUserRole', $user->id) }}" method="post">
                             @csrf
                             <button type="submit" class="btn btn-red ms-2">Update</button>

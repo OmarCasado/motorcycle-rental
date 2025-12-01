@@ -26,7 +26,7 @@
                     <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->email }}</td>
                     <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($user->role) }}</td>
                     <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
-                        <select name="role" form="update-user-role-{{ $user->id }}">
+                        <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
                             <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
                             <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
                         </select>

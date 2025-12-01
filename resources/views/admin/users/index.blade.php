@@ -38,10 +38,10 @@
                     </div>
                 </div>
 
-                <div>
-                    <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
+                <div class="mt-3">
+                    <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post" class="inline">
                         @csrf
-                        <button type="submit" class="btn btn-red ms-2">Update</button>
+                        <button type="submit" class="btn btn-red">Update</button>
                     </form>
                 </div>
             </div>

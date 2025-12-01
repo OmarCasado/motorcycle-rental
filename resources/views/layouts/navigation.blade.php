@@ -25,6 +25,10 @@
                 <x-nav-link :href="route('AdminShowRentals')" :active="request()->routeIs('AdminShowRentals')">
                     All Rentals
                 </x-nav-link>
+
+                <x-nav-link :href="route('showUsers')" :active="request()->routeIs('showUsers')">
+                    All Users
+                </x-nav-link>
                 @endif
             @endauth
 
@@ -83,6 +87,10 @@
                     @if(Auth::user()->role === 'admin')
                     <x-responsive-nav-link :href="route('AdminShowRentals')">
                         All Rentals
+                    </x-responsive-nav-link>
+
+                    <x-responsive-nav-link :href="route('showUsers')">
+                        All Users
                     </x-responsive-nav-link>
                     @endif
                 @endauth

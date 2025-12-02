@@ -27,7 +27,7 @@
         </header>
 
         <!-- Page Content -->
-        <main>
+        <main class="pt-[70px]">
             @yield('content')
         </main>
         @include('layouts.footer')

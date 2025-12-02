@@ -49,36 +49,38 @@
     </div>
 
     {{-- デスクトップ用のテーブル表示 --}}
-    <table>
-        <thead>
-            <tr>
-                <th class="border-2 border-darkGray text-left px-2">Name</th>
-                <th class="border-2 border-darkGray text-left px-2">Email</th>
-                <th class="border-2 border-darkGray text-left px-2">Current Role</th>
-                <th class="border-2 border-darkGray text-left px-2">Change Role</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach ($users as $user)
+    <div class="hidden sm:block overflow-x-auto">
+        <table>
+            <thead>
                 <tr>
-                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->name }}</td>
-                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->email }}</td>
-                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($user->role) }}</td>
-                    <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
-                        <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
-                            <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
-                            <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
-                        </select>
-                    </td>
-                    <td>
-                        <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
-                            @csrf
-                            <button type="submit" class="btn btn-red ms-2">Update</button>
-                        </form>
-                    </td>
+                    <th class="border-2 border-darkGray text-left px-2">Name</th>
+                    <th class="border-2 border-darkGray text-left px-2">Email</th>
+                    <th class="border-2 border-darkGray text-left px-2">Current Role</th>
+                    <th class="border-2 border-darkGray text-left px-2">Change Role</th>
                 </tr>
-            @endforeach
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                @foreach ($users as $user)
+                    <tr>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->name }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->email }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($user->role) }}</td>
+                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
+                            <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
+                                <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
+                                <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
+                            </select>
+                        </td>
+                        <td>
+                            <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
+                                @csrf
+                                <button type="submit" class="btn btn-red ms-2">Update</button>
+                            </form>
+                        </td>
+                    </tr>
+                @endforeach
+            </tbody>
+        </table>
+    </div>
 </div>
 @endsection

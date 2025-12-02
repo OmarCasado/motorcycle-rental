@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
+@if (session('success'))
+    <div class="text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">
+        {{ session('success') }}
+    </div>
+@endif
+
 <div class="pt-[80px] h-screen flex justify-center flex-col items-center max-[900px]:px-16">
     <h1 class="text-2xl mb-2">User Management</h1>
-
-    @if (session('success'))
-        <div class="text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">
-            {{ session('success') }}
-        </div>
-    @endif
 
     {{-- モバイル用のカード表示 --}}
     <div class="w-full sm:hidden">

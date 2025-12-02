@@ -2,7 +2,7 @@
 
 @section('content')
 @if (session('success'))
-    <div class="text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">
+    <div class="text-green-700 px-4 py-3 rounded mb-4">
         {{ session('success') }}
     </div>
 @endif

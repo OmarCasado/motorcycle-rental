@@ -30,7 +30,7 @@
                     <div class="mb-1">
                         <span class="font-semibold">Change Role:</span>
                         <span class="font-sans">
-                            <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
+                            <select name="role" form="mobile-update-user-role-{{ $user->id }}" class="p-1 w-24">
                                 <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
                                 <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
                             </select>
@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="mt-3">
-                    <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post" class="inline">
+                    <form id="mobile-update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post" class="inline">
                         @csrf
                         <button type="submit" class="btn btn-red">Update</button>
                     </form>
@@ -66,13 +66,13 @@
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $user->email }}</td>
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ ucfirst($user->role) }}</td>
                         <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">
-                            <select name="role" form="update-user-role-{{ $user->id }}" class="p-1 w-24">
+                            <select name="role" form="pc-update-user-role-{{ $user->id }}" class="p-1 w-24">
                                 <option value="user" {{ $user->role === 'user' ? 'selected' : '' }}>User</option>
                                 <option value="admin" {{ $user->role === 'admin' ? 'selected' : '' }}>Admin</option>
                             </select>
                         </td>
                         <td>
-                            <form id="update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
+                            <form id="pc-update-user-role-{{ $user->id }}" action="{{ route('updateUserRole', $user->id) }}" method="post">
                                 @csrf
                                 <button type="submit" class="btn btn-red ms-2">Update</button>
                             </form>

@@ -4,7 +4,7 @@
 @section('body-bg', "max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed")
 
 @if (session('success'))
-    <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded mb-4 pt-[90px]">
+    <div class="text-green-700 px-4 py-3 rounded mb-4 min-[900px]:fixed">
         {{ session('success') }}
     </div>
 @endif

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 @if (session('success'))
     <div class="text-green-700 px-4 py-3 rounded mb-4 min-[900px]:fixed">
         {{ session('success') }}

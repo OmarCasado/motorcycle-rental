@@ -1,20 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if ($errors->any())
+    <div style="color: red;" class="fixed px-5">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>• {{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div class="pt-[80px] min-[900px]:h-screen flex justify-center items-center gap-10 max-[900px]:flex-col">
 
   <div class="flex flex-col max-[900px]:items-center">
     <h1 class="text-2xl mb-2">Rent {{ $motorcycle->brand->name }} {{ $motorcycle->model }}</h1>
-
-    @if ($errors->any())
-      <div style="color: red;">
-        <ul>
-          @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-          @endforeach
-        </ul>
-      </div>
-    @endif
 
     <form action="{{ route('reserveMotorcycle', $motorcycle->id) }}" method="POST">
         @csrf

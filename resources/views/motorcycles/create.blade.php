@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 @if ($errors->any())
     <div style="color: red;" class="fixed px-5">
         <ul>

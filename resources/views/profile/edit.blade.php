@@ -1,18 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
+
+@if ($errors->any())
+    <div style="color: red;" class="fixed px-5">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>• {{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div class="pt-[80px] h-screen flex flex-col justify-center items-center">
     <h1 class="text-2xl mb-2">Edit Profile</h1>
-
-    @if ($errors->any())
-        <div class="mb-4 rounded-[10px] border border-red-400 bg-red-100 px-4 py-3 text-red-700">
-            <ul class="list-disc pl-5 text-sm">
-                @foreach ($errors->all() as $error)
-                    <li class="font-sans">• {{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <form action="{{ route('updateMyProfile') }}" method="POST" class="flex flex-col items-center">
         @csrf

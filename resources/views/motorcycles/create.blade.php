@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+@if ($errors->any())
+    <div style="color: red;" class="fixed px-5">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>• {{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
 <div class="pt-[80px] h-screen flex flex-col justify-center items-center">
     <h1 class="text-2xl mb-2">Add New Motorcycle</h1>
-
-    @if ($errors->any())
-        <div style="color: red;">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>• {{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
 
     <form action="{{ route('storeMotorcycle') }}" method="post" enctype="multipart/form-data">
         @csrf

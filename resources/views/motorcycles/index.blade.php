@@ -58,9 +58,7 @@
                     </h2>
                     <p class="text-sm text-white">Year: {{ $moto->year }}</p>
                     <p class="text-sm text-white">Color: {{ $moto->color }}</p>
-                    <p class="text-sm text-white font-semibold mt-2">
-                        ¥ {{ number_format($moto->price_per_day) }} / day
-                    </p>
+                    <p class="text-sm text-white font-semibold mt-2"> Price: ¥ {{ number_format($moto->price_per_day) }} / day</p>
                     {{-- Availability --}}
                     <div class="mt-2">
                         @if($moto->is_available)

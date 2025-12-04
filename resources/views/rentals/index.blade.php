@@ -5,7 +5,7 @@
     <h1 class="text-2xl mb-2">My Rentals</h1>
 
     @if ($rentals->isEmpty())
-        <p>You have no rentals yet.</p>
+        <p>You have no rentals.</p>
     @else
     {{-- モバイル用のカード表示 --}}
     <div class="w-full sm:hidden">

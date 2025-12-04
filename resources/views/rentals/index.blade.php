@@ -9,7 +9,8 @@
     @else
     {{-- モバイル用のカード表示 --}}
     <div class="w-full sm:hidden">
-
+        @foreach ($rentals as $rental)
+        @endforeach
     </div>
 
     {{-- デスクトップ用のテーブル表示 --}}

@@ -7,6 +7,7 @@
     @if ($rentals->isEmpty())
         <p>No rentals found.</p>
     @else
+
         {{-- モバイル用のカード表示 --}}
         <div class="w-full sm:hidden">
             @foreach ($rentals as $rental)

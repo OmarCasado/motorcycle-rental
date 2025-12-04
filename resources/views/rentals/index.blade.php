@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="pt-[80px] h-screen flex justify-center flex-col items-center max-[900px]:px-16">
+<div class="pt-[80px] h-screen flex justify-center flex-col items-center max-[900px]:px-16 overflow-x-auto">
     <h1 class="text-2xl mb-2">My Rentals</h1>
 
     @if ($rentals->isEmpty())
@@ -67,10 +67,10 @@
             <tbody>
                 @foreach ($rentals as $rental)
                     <tr>
-                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
-                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
-                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
-                        <td class="border-2 border-darkGray text-left px-5 max-[900px]:text-sm max-[900px]:px-2">{{ number_format($rental->total_price) }}</td>
+                        <td class="border-2 border-darkGray text-left px-5">{{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}</td>
+                        <td class="border-2 border-darkGray text-left px-5">{{ $rental->start_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5">{{ $rental->end_datetime->format('Y/m/d H:i') }}</td>
+                        <td class="border-2 border-darkGray text-left px-5">{{ number_format($rental->total_price) }}</td>
                         <td>
                             @if($rental->status === 'active')
                                 <form action="{{ route('cancelMyRental', $rental->id) }}" method="post">

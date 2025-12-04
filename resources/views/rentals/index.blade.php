@@ -8,6 +8,9 @@
         <p>You have no rentals yet.</p>
     @else
     {{-- モバイル用のカード表示 --}}
+    <div class="w-full sm:hidden">
+
+    </div>
 
     {{-- デスクトップ用のテーブル表示 --}}
         <table>

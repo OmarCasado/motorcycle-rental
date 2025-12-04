@@ -54,6 +54,7 @@
     </div>
 
     {{-- デスクトップ用のテーブル表示 --}}
+    <div class="hidden sm:block overflow-x-auto">
         <table>
             <th>
                 <tr>
@@ -84,6 +85,7 @@
                 @endforeach
             </tbody>
         </table>
+    </div>
     @endif
 </div>
 @endsection

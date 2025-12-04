@@ -14,6 +14,30 @@
                 <div class="font-bold text-lg mb-1">
                     {{ $rental->motorcycle->brand->name }} {{ $rental->motorcycle->model }}
                 </div>
+
+                <div class="text-sm text-darkGray/90">
+                    <div class="mb-1">
+                        <span class="font-semibold">Start:</span>
+                        <span class="font-sans">{{ $rental->start_datetime->format('Y/m/d H:i') }}</span>
+                    </div>
+                    <div class="mb-1">
+                        <span class="font-semibold">End:</span>
+                        <span class="font-sans">{{ $rental->end_datetime->format('Y/m/d H:i') }}</span>
+                    </div>
+                    <div class="mb-1">
+                        <span class="font-semibold">Total Price (¥):</span>
+                        <span class="font-sans">{{ number_format($rental->total_price) }}</span>
+                    </div>
+                    <div class="mb-2">
+                        <span class="font-semibold">Status:</span>
+                        <span class="inline-block rounded px-2 py-0.5 text-xs
+                                    {{ $rental->status === 'active'
+                                    ? 'bg-green-100 text-green-700'
+                                    : 'bg-gray-200 text-gray-700' }}">
+                            {{ ucfirst($rental->status) }}
+                        </span>
+                    </div>
+                </div>
             </div>
         @endforeach
     </div>

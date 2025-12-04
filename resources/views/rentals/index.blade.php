@@ -37,6 +37,17 @@
                             {{ ucfirst($rental->status) }}
                         </span>
                     </div>
+
+                    <div class="mt-3">
+                        @if ($rental->status === 'active')
+                            <form action="{{ route('cancelMyRental', $rental->id) }}" method="POST" class="inline">
+                                @csrf
+                                <button type="submit" class="btn btn-red">Cancel</button>
+                            </form>
+                        @else
+                            <span class="text-sm text-darkGray/70">—</span>
+                        @endif
+                    </div>
                 </div>
             </div>
         @endforeach

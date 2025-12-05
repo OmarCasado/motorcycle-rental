@@ -27,7 +27,6 @@
         {{-- Email --}}
         <div>
             <label for="email" class="block text-sm font-semibold mb-1">Email:</label>
-
             <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="leading-[1.5rem] mb-[10px] rounded-[5px] border border-darkGray py-0 font-sans" required>
         </div>
 

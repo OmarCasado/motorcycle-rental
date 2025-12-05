@@ -33,7 +33,6 @@
         {{-- Buttons --}}
         <div class="flex items-center gap-3 pt-2">
             <button type="submit" class="btn btn-red">Save</button>
-
             <a href="{{ route('showMyProfile') }}" class="text-sm text-gray-600 hover:underline">Cancel</a>
         </div>
     </form>

@@ -61,7 +61,7 @@
         </table>
     </div>
 
-    <button type="submit" class="btn btn-red">Save</button>
+        <button type="submit" class="btn btn-red">Save</button>
     </form>
 </div>
 @endsection

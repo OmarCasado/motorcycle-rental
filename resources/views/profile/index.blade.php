@@ -77,7 +77,6 @@
                 View all my rentals
             </a>
         </div>
-
     </div>
 </div>
 @endsection

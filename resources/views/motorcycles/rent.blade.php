@@ -38,7 +38,6 @@
 
         <button type="submit" class="btn btn-red">Reserve</button>
     </form>
-
   </div>
 
     <div>

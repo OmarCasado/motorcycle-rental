@@ -40,8 +40,8 @@
     </form>
   </div>
 
-    <div>
-        @include('layouts.calendar')
-    </div>
+  <div>
+    @include('layouts.calendar')
+  </div>
 </div>
 @endsection

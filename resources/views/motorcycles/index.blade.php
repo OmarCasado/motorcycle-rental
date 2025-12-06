@@ -118,6 +118,7 @@
 <!--ブランドのヴァリューをまとめるセクション。-->
 <section id="about">
     <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl">ABOUT US</h2>
+
     <div id="about_wrapper" class="flex justify-evenly items-center h-screen w-[90%] text-white my-0 mx-auto max-[900px]:flex-col max-[900px]:h-auto">
         <div id="about_card1" class="w-[35%] h-[70%] overflow-auto bg-darkGray rounded-[10px] shadow-[5px_5px_6px_rgb(124,130,138)] border border-darkGray text-left p-[10px] mb-[20px] max-[900px]:w-[90%]">
             <h3>Japan On 2 Wheels</h3>
@@ -125,7 +126,9 @@
                 tourism is concentrated in metropolitan areas, such as the greater Tokyo area or Osaka city, due to
                 their accessibility by train, bus, and various transportation methods. However, the rural and
                 untouched countryside, brimming with divine-like nature, remains undiscovered by many, including the
-                Japanese people themselves.</p>
+                Japanese people themselves.
+            </p>
+
             <p> J.O.2 aims to provide you with the means (our motorcycles) to access many remote areas of these
                 islands that are typically challenging to reach by other methods. This endeavor seeks to offer you
                 an enhanced understanding of the exceptional nature of this country. We present a wide variety of

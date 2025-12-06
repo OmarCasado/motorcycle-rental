@@ -42,7 +42,8 @@
 <!-- レンタル可能バイクを提示するセクション。各モデルは単独のarticleで構成する。-->
 <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
     <h2 id="new_models_title" class="m-0 text-5xl pt-12 mb-12 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl">AVAILABLE MODELS</h2>
-    {{-- Cards Grid --}}
+
+    {{-- カ－ドグリッド --}}
     <div class="flex justify-center gap-10 max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
         @foreach($motorcycles as $moto)
             <div class="border border-lightGray rounded-[25px] w-[350px] h-[500px] bg-gradient-to-b from-lightGray to-darkGray shadow-md hover:shadow-lg transition relative flex flex-col justify-start items-center max-[900px]:mb-[20px]">
@@ -53,7 +54,7 @@
                         alt="{{ $moto->model }}"
                         class="w-[370px] hover:scale-125 transition">
                 </a>
-                <!-- Contents -->
+                <!-- コンテンツ -->
                 <div class="p-4 text-left w-full">
                     <h2 class="text-lg font-bold mb-2 text-white">
                         {{ strtoupper($moto->brand->name ?? 'N/A') }} {{ strtoupper($moto->model) }}
@@ -61,7 +62,7 @@
                     <p class="text-sm text-white">Year: {{ $moto->year }}</p>
                     <p class="text-sm text-white">Color: {{ $moto->color }}</p>
                     <p class="text-sm text-white font-semibold mt-2"> Price: ¥ {{ number_format($moto->price_per_day) }} / day</p>
-                    {{-- Availability --}}
+                    {{-- アベイラビリティ --}}
                     <div class="mt-2">
                         @if($moto->is_available)
                             <span class="bg-green-100 text-green-700 text-xs px-2 py-1 rounded">Available</span>
@@ -69,18 +70,18 @@
                             <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">Not Available</span>
                         @endif
                     </div>
-                    {{-- Buttons --}}
+                    {{-- ボタン --}}
                     <div class="mt-4 flex gap-1" >
-                        {{-- View --}}
+                        {{-- ビュー --}}
                         <a href="{{ route('showMotorcycle', $moto->id) }}" class="btn btn-blue">View</a>
                         @auth
-                            {{-- Rent --}}
+                            {{-- レンタル --}}
                             <a href="{{ route('rentMotorcycle', $moto->id) }}"
                             class="btn btn-green">Rent</a>
-                            {{-- Edit --}}
+                            {{-- 編集 --}}
                             <a href="{{ route('editMotorcycle', $moto->id) }}"
                             class="btn btn-yellow">Edit</a>
-                            {{-- Delete --}}
+                            {{-- 削除 --}}
                             <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST"
                                 onsubmit="return confirm('Are you sure?')" class="mx-auto">
                                 @csrf

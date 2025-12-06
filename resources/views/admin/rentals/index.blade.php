@@ -35,10 +35,7 @@
                         </div>
                         <div class="mb-2">
                             <span class="font-semibold">Status:</span>
-                            <span class="inline-block rounded px-2 py-0.5 text-xs
-                                        {{ $rental->status === 'active'
-                                            ? 'bg-green-100 text-green-700'
-                                            : 'bg-gray-200 text-gray-700' }}">
+                            <span class="inline-block rounded px-2 py-0.5 text-xs {{ $rental->status === 'active' ? 'bg-green-100 text-green-700' : 'bg-gray-200 text-gray-700' }}">
                                 {{ ucfirst($rental->status) }}
                             </span>
                         </div>

@@ -29,15 +29,26 @@
     <h3 class="m-0 p-0 max-[900px]:p-[25px] max-[900px]:text-2xl max-[900px]:text-white">BLOG</h3>
 
     <ul class="m-0 p-2">
-        <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+        <li class="relative mb-[10px]">
+            <a href="#" class="flex justify-center items-center">
+                <img src="/images/o-dan/o-dan_new.jpg" alt="Yamaha's new motorcycle" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
                 <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">Yamaha's new upcoming</p>
-            </a></li>
-        <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_solo.jpg" alt="Solo touring" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+            </a>
+        </li>
+
+        <li class="relative mb-[10px]">
+            <a href="#" class="flex justify-center items-center">
+                <img src="/images/o-dan/o-dan_solo.jpg" alt="Solo touring" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
                 <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">What to pack for a touring?</p>
-            </a></li>
-        <li class="relative mb-[10px]"><a href="#" class="flex justify-center items-center"><img src="/images/o-dan/o-dan_police.jpg" alt="Police information" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
+            </a>
+        </li>
+
+        <li class="relative mb-[10px]">
+            <a href="#" class="flex justify-center items-center">
+                <img src="/images/o-dan/o-dan_police.jpg" alt="Police information" class="w-full filter saturate-0 hover:shadow[3px_3px_3px_darkGray] hover:saturate-100 hover:z-30 hover:border-2 hover:border-greenCustom transition duration-100">
                 <p class="absolute text-white bg-greenCustom z-20 m-0 bottom-0 left-0 w-full p-[1%]">Police cracking down on speed</p>
-            </a></li>
+            </a>
+        </li>
     </ul>
 </aside>
 

@@ -60,21 +60,21 @@
     <div class="flex justify-center gap-10 max-[900px]:flex-col max-[900px]:justify-center max-[900px]:items-center ">
         @foreach($motorcycles as $moto)
             <div class="border border-lightGray rounded-[25px] w-[350px] h-[500px] bg-gradient-to-b from-lightGray to-darkGray shadow-md hover:shadow-lg transition relative flex flex-col justify-start items-center max-[900px]:mb-[20px]">
-                <!-- Image -->
+                <!-- 画像 -->
                 <a href="{{ route('showMotorcycle', $moto->id) }}" class="w-full">
-                    <img
-                        src="{{ $moto->image_path ? asset('storage/' . $moto->image_path) : asset('images/default.jpg') }}"
-                        alt="{{ $moto->model }}"
-                        class="w-[370px] hover:scale-125 transition">
+                    <img src="{{ $moto->image_path ? asset('storage/' . $moto->image_path) : asset('images/default.jpg') }}" alt="{{ $moto->model }}" class="w-[370px] hover:scale-125 transition">
                 </a>
+
                 <!-- コンテンツ -->
                 <div class="p-4 text-left w-full">
                     <h2 class="text-lg font-bold mb-2 text-white">
                         {{ strtoupper($moto->brand->name ?? 'N/A') }} {{ strtoupper($moto->model) }}
                     </h2>
+
                     <p class="text-sm text-white">Year: {{ $moto->year }}</p>
                     <p class="text-sm text-white">Color: {{ $moto->color }}</p>
                     <p class="text-sm text-white font-semibold mt-2"> Price: ¥ {{ number_format($moto->price_per_day) }} / day</p>
+
                     {{-- アベイラビリティ --}}
                     <div class="mt-2">
                         @if($moto->is_available)
@@ -83,20 +83,20 @@
                             <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">Not Available</span>
                         @endif
                     </div>
+
                     {{-- ボタン --}}
                     <div class="mt-4 flex gap-1" >
                         {{-- ビュー --}}
                         <a href="{{ route('showMotorcycle', $moto->id) }}" class="btn btn-blue">View</a>
                         @auth
                             {{-- レンタル --}}
-                            <a href="{{ route('rentMotorcycle', $moto->id) }}"
-                            class="btn btn-green">Rent</a>
+                            <a href="{{ route('rentMotorcycle', $moto->id) }}" class="btn btn-green">Rent</a>
+
                             {{-- 編集 --}}
-                            <a href="{{ route('editMotorcycle', $moto->id) }}"
-                            class="btn btn-yellow">Edit</a>
+                            <a href="{{ route('editMotorcycle', $moto->id) }}" class="btn btn-yellow">Edit</a>
+
                             {{-- 削除 --}}
-                            <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST"
-                                onsubmit="return confirm('Are you sure?')" class="mx-auto">
+                            <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="mx-auto">
                                 @csrf
                                 <button type="submit" class="btn btn-red">Delete</button>
                             </form>
@@ -107,8 +107,7 @@
         @endforeach
         @auth
             <div class="mt-6">
-                <a href="{{ route('createMotorcycle') }}"
-                class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                <a href="{{ route('createMotorcycle') }}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
                 + Add Motorcycle
                 </a>
             </div>

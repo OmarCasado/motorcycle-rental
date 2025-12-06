@@ -22,6 +22,7 @@
         </video>
     </div>
 </section>
+
 <!--最新ニュースを含むアサイド。-->
 <aside class="flex flex-col justify-center w-[20%] absolute top-[150px] bg-white/50 p-2 ml-[10px] text-center rounded-[50px] max-[900px]:relative max-[900px]:w-full max-[900px]:p-[10px] max-[900px]:m-0 max-[900px]:-top-[10px] max-[900px]:-z-10 max-[900px]:bg-[url('/images/o-dan/o-dan_roadline.jpg')] max-[900px]:bg-center max-[900px]:bg-cover max-[900px]:bg-fixed">
     <h3 class="m-0 p-0 max-[900px]:p-[25px] max-[900px]:text-2xl max-[900px]:text-white">BLOG</h3>
@@ -37,6 +38,7 @@
             </a></li>
     </ul>
 </aside>
+
 <!-- レンタル可能バイクを提示するセクション。各モデルは単独のarticleで構成する。-->
 <section id="new_models" class="text-center bg-darkGray text-white h-screen max-[900px]:h-auto max-[900px]:pb-12">
     <h2 id="new_models_title" class="m-0 text-5xl pt-12 mb-12 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl">AVAILABLE MODELS</h2>
@@ -99,6 +101,7 @@
         @endauth
     </div>
 </section>
+
 <!--ブランドのヴァリューをまとめるセクション。-->
 <section id="about">
     <h2 class="m-0 text-5xl text-white pt-24 text-center pb-5 [text-shadow:2px_2px_2px_rgb(56,58,59)] max-[900px]:text-2xl">ABOUT US</h2>

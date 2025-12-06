@@ -45,8 +45,6 @@
                                 @csrf
                                 <button type="submit" class="btn btn-red">Cancel</button>
                             </form>
-                        @else
-                            <span class="text-sm text-darkGray/70">—</span>
                         @endif
                     </div>
                 </div>

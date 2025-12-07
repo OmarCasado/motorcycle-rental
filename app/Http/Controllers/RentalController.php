@@ -103,7 +103,7 @@ class RentalController extends Controller
         $totalPrice = $motorcycle->price_per_day * $days;
 
         // 予約する
-        $rental = Rental::create([
+        Rental::create([
             'user_id'        => $request->user()->id,
             'motorcycle_id'  => $id,
             'start_datetime' => $start,

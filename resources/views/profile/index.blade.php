@@ -23,22 +23,22 @@
 
             <dl class="space-y-3 text-sm">
                 <div class="flex justify-between">
-                    <dt class="font-semibold">Name</dt>
+                    <dt class="font-semibold">Name:</dt>
                     <dd class="font-sans">{{ $user->name }}</dd>
                 </div>
 
                 <div class="flex justify-between">
-                    <dt class="font-semibold">Email</dt>
+                    <dt class="font-semibold">Email:</dt>
                     <dd class="font-sans">{{ $user->email }}</dd>
                 </div>
 
                 <div class="flex justify-between">
-                    <dt class="font-semibold">Role</dt>
+                    <dt class="font-semibold">Role:</dt>
                     <dd class="font-sans">{{ $roleLabel }}</dd>
                 </div>
 
                 <div class="flex justify-between">
-                    <dt class="font-semibold">Member since</dt>
+                    <dt class="font-semibold">Member since:</dt>
                     <dd class="font-sans">
                         {{ $user->created_at->format('Y/m/d') }}
                     </dd>
@@ -56,17 +56,17 @@
 
             <ul class="space-y-3 text-sm">
                 <li class="flex justify-between">
-                    <span class="font-semibold">Total rentals</span>
+                    <span class="font-semibold">Total rentals:</span>
                     <span class="font-sans">{{ $totalRentals }}</span>
                 </li>
 
                 <li class="flex justify-between">
-                    <span class="font-semibold">Active rentals</span>
+                    <span class="font-semibold">Active rentals:</span>
                     <span class="font-sans">{{ $activeRentals }}</span>
                 </li>
 
                 <li class="flex justify-between">
-                    <span class="font-semibold">Total spent (¥)</span>
+                    <span class="font-semibold">Total spent (¥):</span>
                     <span class="font-sans">
                         {{ $totalSpent }}
                     </span>

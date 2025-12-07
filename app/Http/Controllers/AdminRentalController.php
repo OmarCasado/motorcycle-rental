@@ -11,7 +11,7 @@ class AdminRentalController extends Controller
     /**
      * 管理者レンタル画面を表示
      */
-    public function index(Request $request)
+    public function index()
     {
         $rentals = Rental::with(['motorcycle', 'user'])
             ->orderBy('start_datetime', 'desc')

@@ -51,7 +51,7 @@
         </div>
 
         {{-- レンタル情報カ－ド --}}
-        <div class="rounded-[10px] border border-gray-200 bg-white/80 p-5 shadow-sm">
+        <div class="rounded-[10px] border border-gray-200 bg-white/80 p-5 shadow-sm mb-10">
             <h2 class="mb-4 text-xl font-semibold">Rental summary</h2>
 
             <ul class="space-y-3 text-sm">

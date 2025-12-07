@@ -54,8 +54,8 @@ class ProfileController extends Controller
         $user = Auth::user();
 
         $validated = $request->validate([
-        'name'  => ['required', 'string', 'max:255'],
-        'email' => ['required', 'email', 'max:255', 'unique:users,email,' . $user->id],
+            'name'  => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'max:255', 'unique:users,email,' . $user->id],
         ]);
 
         $user->name  = $validated['name'];

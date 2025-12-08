@@ -12,4 +12,9 @@ class Review extends Model
         'rating',
         'comment'
     ];
+
+    public function motorcycle()
+    {
+        return $this->belongsTo(Motorcycle::class);
+    }
 }

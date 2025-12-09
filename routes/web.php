@@ -23,9 +23,6 @@ Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('sh
 // お問い合わせページ
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contactUs');
 
-// レヴューを保存
-Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
-
 // 認証
 Route::middleware('auth')->group(function() {
 
@@ -64,6 +61,9 @@ Route::middleware('auth')->group(function() {
 
     // マイプロフィール情報を編集
     Route::post('/my-profile/update', [ProfileController::class, 'update'])->name('updateMyProfile');
+
+    // レヴューを保存
+    Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
 
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面

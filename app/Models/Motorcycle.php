@@ -17,11 +17,13 @@ class Motorcycle extends Model
         'image_path',
     ];
 
+    // バイクに関連するレビュー
     public function reviews()
     {
         return $this->hasMany(Review::class);
     }
 
+    // バイクのブランド情報
     public function brand(): BelongsTo
     {
         return $this->belongsTo(Brand::class);

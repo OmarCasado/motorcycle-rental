@@ -24,7 +24,9 @@ Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('sh
 // お問い合わせページ
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contactUs');
 
-// 認証
+/**
+ * 認証済みユーザのみアクセス可能
+ */
 Route::middleware('auth')->group(function() {
 
     // バイクを追加

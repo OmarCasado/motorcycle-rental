@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class ReviewController extends Controller
 {
     /**
-     * レヴューを保存する
+     * レヴューを保存
      */
     public function store()
     {

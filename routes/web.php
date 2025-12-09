@@ -7,6 +7,7 @@ use App\Http\Controllers\RentalController;
 use App\Http\Controllers\AdminRentalController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\ReviewController;
 
 require __DIR__.'/auth.php';
 

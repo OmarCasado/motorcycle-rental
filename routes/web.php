@@ -66,6 +66,9 @@ Route::middleware('auth')->group(function() {
     // レヴューを保存
     Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
 
+    /**
+     * 管理者機能
+     */
     Route::middleware('admin')->group(function(){
         // 管理者レンタル画面
         Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');

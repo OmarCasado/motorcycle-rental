@@ -24,7 +24,8 @@ class User extends Authenticatable
         'role',
     ];
 
-        public function reviews()
+    // バイクに関連するレビュー
+    public function reviews()
     {
         return $this->hasMany(Review::class);
     }

@@ -17,6 +17,11 @@ class Motorcycle extends Model
         'image_path',
     ];
 
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
+
     public function brand(): BelongsTo
     {
         return $this->belongsTo(Brand::class);

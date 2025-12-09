@@ -23,6 +23,9 @@ Route::get('/motorcycles/{id}', [MotorcycleController::class, 'show'])->name('sh
 // お問い合わせページ
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contactUs');
 
+// レヴューを保存
+Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
+
 // 認証
 Route::middleware('auth')->group(function() {
 

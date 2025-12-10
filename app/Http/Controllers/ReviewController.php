@@ -24,7 +24,7 @@ class ReviewController extends Controller
             'comment' => 'nullable|string|max:1000',
         ]);
 
-        $review = Review::create([
+        Review::create([
             'user_id'       => $request->user()->id,
             'motorcycle_id' => $id,
             'rating'        => $validated['rating'],

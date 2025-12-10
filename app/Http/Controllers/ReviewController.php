@@ -22,6 +22,13 @@ class ReviewController extends Controller
             'rating'  => 'required|integer|min:1|max:5',
             'comment' => 'nullable|string|max:1000',
         ]);
+
+        $review = Review::create([
+            'user_id'       => $request->user()->id,
+            'motorcycle_id' => $request->id,
+            'rating'        => $validated['rating'],
+            'comment'       => $validated['comment'] ?? '',
+        ]);
     }
 
     /**

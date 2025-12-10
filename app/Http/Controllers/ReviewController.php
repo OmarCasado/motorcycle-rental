@@ -11,7 +11,7 @@ class ReviewController extends Controller
      * レヴュー一覧を表示
      */
     public function index(){
-        //
+
     }
 
     /**
@@ -40,6 +40,6 @@ class ReviewController extends Controller
      */
     public function delete()
     {
-        //
+
     }
 }

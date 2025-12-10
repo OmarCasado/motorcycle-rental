@@ -16,9 +16,12 @@ class ReviewController extends Controller
     /**
      * レヴューを保存
      */
-    public function store()
+    public function store(Request $request)
     {
-        //
+        $validated = $request->validate([
+            'rating'  => 'required|integer|min:1|max:5',
+            'comment' => 'nullable|string|max:1000',
+        ]);
     }
 
     /**

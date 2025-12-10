@@ -66,13 +66,13 @@ Route::middleware('auth')->group(function() {
     Route::post('/my-profile/update', [ProfileController::class, 'update'])->name('updateMyProfile');
 
     // レヴュー一覧を表示
-    Route::get('/motorcycles/{id}/reviews', [ReviewController::class, 'index'])->name('showReviews');
+    Route::get('/motorcycles/{id}/show-reviews', [ReviewController::class, 'index'])->name('showReviews');
 
     // レヴューを保存
-    Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
+    Route::post('/motorcycles/{id}/store-reviews', [ReviewController::class, 'store'])->name('storeReview');
 
     // レヴューを削除
-    Route::post('/motorcycles/{motorcycle_id}/reviews/{review_id}/delete', [ReviewController::class, 'delete'])->name('deleteReview');
+    Route::post('/motorcycles/{id}/delete-reviews', [ReviewController::class, 'delete'])->name('deleteReview');
 
     /**
      * 管理者機能

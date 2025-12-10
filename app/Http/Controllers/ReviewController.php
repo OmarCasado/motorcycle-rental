@@ -17,7 +17,7 @@ class ReviewController extends Controller
     /**
      * レヴューを保存
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $validated = $request->validate([
             'rating'  => 'required|integer|min:1|max:5',
@@ -26,12 +26,12 @@ class ReviewController extends Controller
 
         $review = Review::create([
             'user_id'       => $request->user()->id,
-            'motorcycle_id' => $request->id,
+            'motorcycle_id' => $id,
             'rating'        => $validated['rating'],
             'comment'       => $validated['comment'] ?? '',
         ]);
 
-        return redirect()->route('showMotorcycle', ['id' => $request->id])
+        return redirect()->route('showMotorcycle', $id)
             ->with('success', 'Review submitted.');
     }
 

@@ -65,8 +65,14 @@ Route::middleware('auth')->group(function() {
     // マイプロフィール情報を編集
     Route::post('/my-profile/update', [ProfileController::class, 'update'])->name('updateMyProfile');
 
+    // レヴュー一覧を表示
+    Route::get('/motorcycles/{id}/reviews', [ReviewController::class, 'index'])->name('showReviews');
+
     // レヴューを保存
     Route::post('/motorcycles/{id}/reviews', [ReviewController::class, 'store'])->name('storeReview');
+
+    // レヴューを削除
+    Route::post('/motorcycles/{motorcycle_id}/reviews/{review_id}/delete', [ReviewController::class, 'delete'])->name('deleteReview');
 
     /**
      * 管理者機能

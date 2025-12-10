@@ -30,6 +30,9 @@ class ReviewController extends Controller
             'rating'        => $validated['rating'],
             'comment'       => $validated['comment'] ?? '',
         ]);
+
+        return redirect()->route('showMotorcycle', ['id' => $request->id])
+            ->with('success', 'Review submitted.');
     }
 
     /**

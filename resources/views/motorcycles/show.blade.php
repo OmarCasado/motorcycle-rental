@@ -41,7 +41,7 @@
 
     <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
         @csrf
-        <textarea name="comment" rows="4" cols="50"></textarea>
+        <textarea name="comment" cols="50" rows="4" placeholder="Give us your opinion" class="resize-none px-[10px] mb-5"></textarea>
         <br>
 
 

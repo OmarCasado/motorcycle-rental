@@ -34,4 +34,9 @@
         @include('layouts.calendar')
     </div>
 </div>
+
+{{-- Comments Section --}}
+<div>
+    <h2 class="text-2xl mb-2">Leave a comment</h2>
+</div>
 @endsection

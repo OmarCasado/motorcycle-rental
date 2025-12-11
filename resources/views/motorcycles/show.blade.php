@@ -44,7 +44,7 @@
         <textarea name="comment" cols="50" rows="4" placeholder="Give us your opinion" class="resize-none px-[10px] mb-5"></textarea>
         <br>
 
-
+        <button type="submit" class="btn btn-red">Submit</button>
     </form>
 </div>
 @endsection

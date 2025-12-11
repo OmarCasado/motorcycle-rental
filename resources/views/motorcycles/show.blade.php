@@ -35,7 +35,7 @@
     </div>
 </div>
 
-{{-- Comments Section --}}
+{{-- コメントセクション --}}
 <div>
     <h2 class="text-2xl mb-2">Leave a comment</h2>
 </div>

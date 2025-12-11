@@ -41,6 +41,9 @@
 
     <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
         @csrf
+        <textarea name="content" rows="4" cols="50" class="typed_input leading-[1.5rem] my-[5px] rounded-[5px] border border-darkGray py-0" required></textarea>
+        <br>
+
 
     </form>
 </div>

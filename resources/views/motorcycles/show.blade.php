@@ -42,6 +42,7 @@
     <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
         @csrf
 
+        <h3>Rating: </h3>
         <div class="flex flex-row-reverse justify-end gap-1">
             @for ($i = 5; $i >= 1; $i--)
                 <input type="radio" id="star{{ $i }}" name="rating" value="{{ $i }}" class="hidden peer" required />
@@ -53,6 +54,7 @@
         </div>
         <br>
 
+        <h3>Comment: </h3>
         <textarea name="comment" cols="50" rows="4" placeholder="Give us your opinion" class="resize-none px-[10px] mb-5"></textarea>
         <br>
 

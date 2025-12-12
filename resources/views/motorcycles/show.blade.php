@@ -41,7 +41,6 @@
 
     <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
         @csrf
-
         <h3>Rating: </h3>
         <div class="flex flex-row-reverse justify-end gap-1">
             @for ($i = 5; $i >= 1; $i--)

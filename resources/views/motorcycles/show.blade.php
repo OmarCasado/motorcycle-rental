@@ -38,6 +38,29 @@
 {{-- コメントセクション --}}
 <div>
     <h2 class="text-2xl mb-2">Reviews</h2>
+
+    @if($reviews->isEmpty())
+            <p>No reviews yet. Be the first to review this motorcycle!</p>
+        @else
+            @foreach($reviews as $review)
+                <div>
+                    <div>
+                        <strong>{{ $review->user->name }}</strong>
+                        <div class="flex">
+                            @for ($i = 1; $i <= 5; $i++)
+                                @if ($i <= $review->rating)
+                                    <span class="text-yellow-400">★</span>
+                                @else
+                                    <span class="text-gray-300">★</span>
+                                @endif
+                            @endfor
+                        </div>
+                    </div>
+                    <p>{{ $review->comment }}</p>
+                </div>
+            @endforeach
+        @endif
+
     @auth
         <h2 class="text-2xl mb-2">Leave your rating</h2>
 

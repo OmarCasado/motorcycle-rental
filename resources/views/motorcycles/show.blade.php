@@ -37,29 +37,31 @@
 
 {{-- コメントセクション --}}
 <div>
-
     <h2 class="text-2xl mb-2 mt-10">Reviews</h2>
-    <h2 class="text-2xl mb-2">Leave your rating</h2>
 
-    <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
-        @csrf
-        <h3>Rating: </h3>
-        <div class="flex flex-row-reverse justify-end gap-1">
-            @for ($i = 5; $i >= 1; $i--)
-                <input type="radio" id="star{{ $i }}" name="rating" value="{{ $i }}" class="hidden peer" required />
+    @auth
+        <h2 class="text-2xl mb-2">Leave your rating</h2>
 
-                <label for="star{{ $i }}" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400 peer-checked:text-yellow-400">
-                    ★
-                </label>
-            @endfor
-        </div>
-        <br>
+        <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
+            @csrf
+            <h3>Rating: </h3>
+            <div class="flex flex-row-reverse justify-end gap-1">
+                @for ($i = 5; $i >= 1; $i--)
+                    <input type="radio" id="star{{ $i }}" name="rating" value="{{ $i }}" class="hidden peer" required />
 
-        <h3>Comment: </h3>
-        <textarea name="comment" cols="50" rows="4" placeholder="Give us your opinion" class="resize-none px-[10px] mb-5"></textarea>
-        <br>
+                    <label for="star{{ $i }}" class="text-2xl cursor-pointer text-gray-300 hover:text-yellow-400 peer-checked:text-yellow-400">
+                        ★
+                    </label>
+                @endfor
+            </div>
+            <br>
 
-        <button type="submit" class="btn btn-red">Submit</button>
-    </form>
+            <h3>Comment: </h3>
+            <textarea name="comment" cols="50" rows="4" placeholder="Give us your opinion" class="resize-none px-[10px] mb-5"></textarea>
+            <br>
+
+            <button type="submit" class="btn btn-red">Submit</button>
+        </form>
+    @endauth
 </div>
 @endsection

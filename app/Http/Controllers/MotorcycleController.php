@@ -27,6 +27,8 @@ class MotorcycleController extends Controller
     {
         $motorcycle = Motorcycle::with(['brand'])->findOrFail($id);
 
+        $reviews = $motorcycle->reviews()->with('user')->get();
+
         $activeRentals = Rental::query()
             ->where('motorcycle_id', $motorcycle->id)
             ->where('status', 'active')
@@ -41,6 +43,7 @@ class MotorcycleController extends Controller
         return view('motorcycles.show', [
             'motorcycle'         => $motorcycle,
             'disabledDateRanges' => $disabledDateRanges,
+            'reviews'            => $reviews,
         ]);
     }
 

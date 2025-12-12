@@ -37,8 +37,7 @@
 
 {{-- コメントセクション --}}
 <div>
-    <h2 class="text-2xl mb-2 mt-10">Reviews</h2>
-
+    <h2 class="text-2xl mb-2">Reviews</h2>
     @auth
         <h2 class="text-2xl mb-2">Leave your rating</h2>
 

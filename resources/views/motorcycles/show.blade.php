@@ -37,6 +37,8 @@
 
 {{-- コメントセクション --}}
 <div>
+
+    <h2 class="text-2xl mb-2 mt-10">Reviews</h2>
     <h2 class="text-2xl mb-2">Leave your rating</h2>
 
     <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">

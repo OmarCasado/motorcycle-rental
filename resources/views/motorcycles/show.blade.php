@@ -63,7 +63,7 @@
     @auth
         <h2 class="text-2xl mb-2 mt-8">Leave your rating</h2>
 
-        <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
+        <form action="{{ route('storeReview', $motorcycle->id) }}" method="post" class="mb-5">
             @csrf
             <h3>Rating: </h3>
             <div class="flex flex-row-reverse justify-end gap-1">

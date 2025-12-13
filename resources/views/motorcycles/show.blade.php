@@ -43,7 +43,7 @@
             <p>No reviews yet. Be the first to review this motorcycle!</p>
         @else
             @foreach($reviews as $review)
-                <div>
+                <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4 max-[900px]:mb-5 w-1/3">
                     <div>
                         <strong>{{ $review->user->name }}</strong>
                         <div class="flex">

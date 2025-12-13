@@ -56,7 +56,7 @@
                             @endfor
                         </div>
                     </div>
-                    <p>{{ $review->comment }}</p>
+                    <p class="font-sans">{{ $review->comment }}</p>
                 </div>
             @endforeach
         @endif

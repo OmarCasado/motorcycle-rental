@@ -36,7 +36,7 @@
 </div>
 
 {{-- コメントセクション --}}
-<div>
+<div class="flex justify-center flex-col items-center max-[900px]:px-16 overflow-x-auto">
     <h2 class="text-2xl mb-2">Reviews</h2>
 
     @if($reviews->isEmpty())
@@ -60,9 +60,8 @@
                 </div>
             @endforeach
         @endif
-
     @auth
-        <h2 class="text-2xl mb-2">Leave your rating</h2>
+        <h2 class="text-2xl mb-2 mt-8">Leave your rating</h2>
 
         <form action="{{ route('storeReview', $motorcycle->id) }}" method="post">
             @csrf

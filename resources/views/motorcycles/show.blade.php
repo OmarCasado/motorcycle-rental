@@ -45,7 +45,10 @@
             @foreach($reviews as $review)
                 <div class="rounded-xl border border-darkGray bg-white/70 shadow p-4 max-[900px]:mb-5 w-96">
                     <div>
-                        <strong class="underline decoration-slate-400">{{ $review->user->name }}</strong>
+                        <div class="flex justify-between">
+                            <strong class="underline decoration-slate-400">{{ $review->user->name }} </strong>
+                            <span class="font-sans text-gray-400">{{ $review->created_at }}</span>
+                        </div>
                         <div class="flex">
                             @for ($i = 1; $i <= 5; $i++)
                                 @if ($i <= $review->rating)

@@ -15,6 +15,10 @@ class RentalController extends Controller
      */
     public function index(Request $request)
     {
+        Rental::where('status', 'active')
+            ->where('end_datetime', '<', Carbon::now())
+            ->update(['status' => 'completed']);
+
         $rentals = Rental::with('motorcycle')
             ->where('user_id', $request->user()->id)
             ->orderBy('start_datetime', 'desc')

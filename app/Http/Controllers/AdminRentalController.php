@@ -12,20 +12,14 @@ class AdminRentalController extends Controller
      */
     public function index()
     {
+        Rental::where('status', 'active')
+            ->where('end_datetime', '<', Carbon::now())
+            ->update(['status' => 'completed']);
+
         $rentals = Rental::with(['motorcycle', 'user'])
             ->orderBy('start_datetime', 'desc')
             ->get();
 
         return view('admin.rentals.index', compact('rentals'));
-    }
-
-    /**
-     * バイクのレンタルをコンプリート
-     */
-    public function completeRental()
-    {
-        Rental::where('status', 'active')
-            ->where('end_datetime', '<', Carbon::now())
-            ->update(['status' => 'completed']);
     }
 }

@@ -3,10 +3,10 @@
         <small class="ml-5 text-white">© 2023 Japan On 2 Wheels @.C.H.</small>
         <div id="media_icons" class="mr-[20px]">
             <div class="flex">
-              <a href="#"><img src="/images/icons/envelope.svg" alt="email icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
-              <a href="#"><img src="/images/icons/phone.svg" alt="mobile phone icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
-              <a href="#"><img src="/images/icons/instagram.svg" alt="instagram icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
-              <a href="#"><img src="/images/icons/youtube.svg" alt="youtube icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
+                <a href="#"><img src="/images/icons/envelope.svg" alt="email icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
+                <a href="#"><img src="/images/icons/phone.svg" alt="mobile phone icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
+                <a href="#"><img src="/images/icons/instagram.svg" alt="instagram icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
+                <a href="#"><img src="/images/icons/youtube.svg" alt="youtube icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
             </div>
         </div>
     </div>

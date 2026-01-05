@@ -25,6 +25,18 @@ class ReviewController extends Controller
             'comment' => 'nullable|string|max:1000',
         ]);
 
+        $completedRental = Rental::where('user_id', $request->user()->id)
+            ->where('motorcycle_id', $id)
+            ->where('status', 'completed')
+            ->first();
+
+        dd($completedRental);
+
+        if(!$completedRental) {
+            return redirect()->route('showMotorcycle', $id)
+                ->with('error', 'You can only review motorcycles you have rented.');
+        }
+
         Review::create([
             'user_id'       => $request->user()->id,
             'motorcycle_id' => $id,

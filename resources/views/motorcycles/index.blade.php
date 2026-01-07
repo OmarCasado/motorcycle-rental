@@ -83,26 +83,25 @@
                             <span class="bg-red-100 text-red-700 text-xs px-2 py-1 rounded">Not Available</span>
                         @endif
                     </div>
+                </div>
+                {{-- ボタン --}}
+                <div class="mb-4 flex gap-1" >
+                    {{-- ビュー --}}
+                    <a href="{{ route('showMotorcycle', $moto->id) }}" class="btn btn-blue">View</a>
+                    @auth
+                        {{-- レンタル --}}
+                        <a href="{{ route('rentMotorcycle', $moto->id) }}" class="btn btn-green">Rent</a>
+                        @if(auth()->user()->role === 'admin')
+                            {{-- 編集 --}}
+                            <a href="{{ route('editMotorcycle', $moto->id) }}" class="btn btn-yellow">Edit</a>
 
-                    {{-- ボタン --}}
-                    <div class="mt-4 flex gap-1" >
-                        {{-- ビュー --}}
-                        <a href="{{ route('showMotorcycle', $moto->id) }}" class="btn btn-blue">View</a>
-                        @auth
-                            {{-- レンタル --}}
-                            <a href="{{ route('rentMotorcycle', $moto->id) }}" class="btn btn-green">Rent</a>
-                            @if(auth()->user()->role === 'admin')
-                                {{-- 編集 --}}
-                                <a href="{{ route('editMotorcycle', $moto->id) }}" class="btn btn-yellow">Edit</a>
-
-                                {{-- 削除 --}}
-                                <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="mx-auto">
-                                    @csrf
-                                    <button type="submit" class="btn btn-red">Delete</button>
-                                </form>
-                            @endif
-                        @endauth
-                    </div>
+                            {{-- 削除 --}}
+                            <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="mx-auto">
+                                @csrf
+                                <button type="submit" class="btn btn-red">Delete</button>
+                            </form>
+                        @endif
+                    @endauth
                 </div>
             </div>
         @endforeach

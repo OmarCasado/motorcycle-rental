@@ -24,8 +24,7 @@ class ProfileController extends Controller
         ->where('status', 'active')->count();
 
         $totalSpent = Rental::where('user_id', $user->id)
-            ->where('status', 'active')
-            ->orWhere('status', 'completed')
+            ->whereIn('status', ['active', 'completed'])
             ->sum('total_price');
 
         return view('profile.index', [

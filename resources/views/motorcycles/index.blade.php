@@ -91,26 +91,29 @@
                         @auth
                             {{-- レンタル --}}
                             <a href="{{ route('rentMotorcycle', $moto->id) }}" class="btn btn-green">Rent</a>
+                            @if(auth()->user()->role === 'admin')
+                                {{-- 編集 --}}
+                                <a href="{{ route('editMotorcycle', $moto->id) }}" class="btn btn-yellow">Edit</a>
 
-                            {{-- 編集 --}}
-                            <a href="{{ route('editMotorcycle', $moto->id) }}" class="btn btn-yellow">Edit</a>
-
-                            {{-- 削除 --}}
-                            <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="mx-auto">
-                                @csrf
-                                <button type="submit" class="btn btn-red">Delete</button>
-                            </form>
+                                {{-- 削除 --}}
+                                <form action="{{ route('deleteMotorcycle', $moto->id) }}" method="POST" onsubmit="return confirm('Are you sure?')" class="mx-auto">
+                                    @csrf
+                                    <button type="submit" class="btn btn-red">Delete</button>
+                                </form>
+                            @endif
                         @endauth
                     </div>
                 </div>
             </div>
         @endforeach
         @auth
-            <div class="mt-6">
-                <a href="{{ route('createMotorcycle') }}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
-                + Add Motorcycle
-                </a>
-            </div>
+            @if(auth()->user()->role === 'admin')
+                <div class="mt-6">
+                    <a href="{{ route('createMotorcycle') }}" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                    + Add Motorcycle
+                    </a>
+                </div>
+            @endif
         @endauth
     </div>
 </section>

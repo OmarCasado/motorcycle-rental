@@ -29,21 +29,6 @@ Route::get('/contact-us', [ContactController::class, 'index'])->name('contactUs'
  */
 Route::middleware('auth')->group(function() {
 
-    // バイクを追加
-    Route::get('/motorcycles/create/new', [MotorcycleController::class, 'create'])->name('createMotorcycle');
-
-    // バイクを編集ページを表示
-    Route::get('/motorcycles/{id}/edit', [MotorcycleController::class, 'edit'])->name('editMotorcycle');
-
-    // バイクを編集
-    Route::post('/motorcycles/update/{id}', [MotorcycleController::class, 'update'])->name('updateMotorcycle');
-
-    // バイクを削除
-    Route::post('/motorcycles/delete/{id}', [MotorcycleController::class, 'delete'])->name('deleteMotorcycle');
-
-    // バイクを保存
-    Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
-
     // レンタルフォーム
     Route::get('/motorcycles/{id}/rent', [RentalController::class, 'rent'])->name('rentMotorcycle');
 
@@ -78,6 +63,22 @@ Route::middleware('auth')->group(function() {
      * 管理者機能
      */
     Route::middleware('admin')->group(function(){
+
+        // バイクを追加
+        Route::get('/motorcycles/create/new', [MotorcycleController::class, 'create'])->name('createMotorcycle');
+
+        // バイクを編集ページを表示
+        Route::get('/motorcycles/{id}/edit', [MotorcycleController::class, 'edit'])->name('editMotorcycle');
+
+        // バイクを編集
+        Route::post('/motorcycles/update/{id}', [MotorcycleController::class, 'update'])->name('updateMotorcycle');
+
+        // バイクを削除
+        Route::post('/motorcycles/delete/{id}', [MotorcycleController::class, 'delete'])->name('deleteMotorcycle');
+
+        // バイクを保存
+        Route::post('/motorcycles/store', [MotorcycleController::class, 'store'])->name('storeMotorcycle');
+
         // 管理者レンタル画面
         Route::get('/admin/rentals', [AdminRentalController::class, 'index'])->name('AdminShowRentals');
 

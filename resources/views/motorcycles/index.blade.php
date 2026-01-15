@@ -62,7 +62,7 @@
             <div class="border border-lightGray rounded-[25px] w-[350px] h-[500px] bg-gradient-to-b from-lightGray to-darkGray shadow-md hover:shadow-lg transition relative flex flex-col justify-start items-center max-[900px]:mb-[20px]">
                 <!-- 画像 -->
                 <a href="{{ route('showMotorcycle', $moto->id) }}" class="w-full">
-                    <img src="{{ $moto->image_path ? asset('storage/' . $moto->image_path) : asset('images/default.jpg') }}" alt="{{ $moto->model }}" class="w-[370px] hover:scale-125 transition">
+                    <img src="{{ $moto->image_path ? asset($moto->image_path) : asset('images/default.jpg') }}" alt="{{ $moto->model }}" class="w-[370px] hover:scale-125 transition">
                 </a>
 
                 <!-- コンテンツ -->

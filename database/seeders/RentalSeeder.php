@@ -33,7 +33,7 @@ class RentalSeeder extends Seeder
             $totalPrice = (int) $pricePerDay * 2;
 
             $rentals[] = [
-                'users_id'       => $userId,
+                'user_id'       => $userId,
                 'motorcycle_id'  => $motorcycleId,
                 'start_datetime' => $start,
                 'end_datetime'   => $end,

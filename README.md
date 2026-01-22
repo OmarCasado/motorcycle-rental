@@ -1,5 +1,12 @@
 # Motorcycle Rental Web Application
 
+**Live Demo:**
+https://motorcycle-rental-production.up.railway.app/motorcycles
+
+ **Demo Accounts:**
+- Admin: `admin@test.com` / `test123`
+- User: `user@test.com` / `test123`
+
 A web application that lets users browse, reserve, and manage motorcycle rentals in Japan.
 
 The system includes user authentication, role-based authorization, and an admin dashboard

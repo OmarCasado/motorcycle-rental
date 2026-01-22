@@ -1,6 +1,6 @@
 <footer class="flex justify-between items-center bg-darkGray h-[70px]">
     <div class="flex items-center gap-3">
-        <small class="ml-5 text-white">© 2023 Japan On 2 Wheels @.C.H.</small>
+        <small class="ml-5 text-white">© <span id="current-year"></span> Japan On 2 Wheels @.C.H.</small>
         <div id="media_icons" class="mr-[20px]">
             <div class="flex">
                 <a href="#"><img src="/images/icons/envelope.svg" alt="email icon" class="w-[20px] invert m-[5px_10px_7px_10px] transition-transform duration-300 hover:scale-150"></a>
@@ -17,3 +17,7 @@
         </a>
     </div>
 </footer>
+
+<script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>
